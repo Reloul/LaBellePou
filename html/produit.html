@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+     <head>
+        <meta content ="charset=UTF-8">
+        <meta name="author" lang="fr" content="Latry Ugo & Serres Valentin">
+        <title> La Bellepou | Produits </title>
+        <link rel="stylesheet" type="text/css" href="../css/produit.css">
+    </head>
+    <body>
+          <header class="haut">
+               <h1 id="titre">La Bellepou</h1>
+          </header>
+          <hr>
+          <div>
+          <nav class="menu">
+               <ul>
+                    <li class="list">
+                         <b></b>
+                         <b></b>
+                         <a href="../html/Bellepou.html">
+                              <span class="icon"><ion-icon name="home"></ion-icon></span>
+                              <span class="title">Accueil</span>
+                         </a>
+                    </li>
+                    <li class="list active">
+                         <b></b>
+                         <b></b>
+                         <a href="../html/produit.html">
+                              <span class="icon"><ion-icon name="cart"></ion-icon></span>
+                              <span class="title">Produits</span>
+                         </a>
+                    </li>
+                    <li class="list">
+                         <b></b>
+                         <b></b>
+                         <a href="#">
+                              <span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
+                              <span class="title">Informations</span>
+                         </a>
+                    </li>
+                    <li class="list">
+                         <b></b>
+                         <b></b>
+                         <a href="../html/contact.html">
+                              <span class="icon"><ion-icon name="call"></ion-icon></span>
+                              <span class="title">Contact</span>
+                         </a>
+                    </li>
+               </ul>
+          </nav>
+          </div>
+          <div class="bandeauPres">
+               <h2 id="catTitre">CATÉGORIES</h2>
+               <p id="catPhrase">Besoin d'une poubelle? Choisissez la catégorie qui vous intéresse :</p>
+               <div class="presentation">
+                    <div  class="presPoub">
+                         <div class="carte">
+                              <div class="imagePres">
+                                   <img id="presCorbeille" src="../doc/poubelle/corbeille/presCorb.png" alt="presentation corbeille" height="300">
+                              </div>
+                              <div class="boutonProd">
+                                   <a id="boutonProduit" href="#corbeilleP">Corbeilles</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="presPoub">
+                         <div class="carte">
+                              <div class="imagePres">
+                                   <img id="presIntérieur" src="../doc/poubelle/intérieur/presInt.png" alt="présentation interieur" height="300">
+                              </div>
+                              <div class="boutonProd">
+                                   <a id="boutonProduit" href="#intérieurP">Poubelles Intérieures</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="presPoub">
+                         <div class="carte">
+                              <div class="imagePres">
+                                   <img id="presExtérieur" src="../doc/poubelle/extérieur/presExte.png" alt="présentation extérieur" height="300">
+                              </div>
+                              <div class="boutonProd">
+                                   <a id="boutonProduit" href="#exterieurP">Poubelles Extérieures</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="pageProduit">
+               <div class="corps"> 
+               </div>
+          </div>
+          <div class="bandeauP">
+               <hr id="corbeilleP">
+               <div class="titre">
+                    <h2>CORBEILLES</h2>
+               </div>
+               <hr>
+          </div>
+          <div class="pageProduit">
+               <div class="corps"> 
+                    <div class="corbeilleTop">
+                         <div class="container">
+                              <div class="card">
+                                   <p>Dunkelgruen</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png" id="dunkel">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Dunkelgruen</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="bleu" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png')"></span>
+                                             <span id="rouge" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-rouge.png')"></span>
+                                             <span id="blanc" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-blanc.png')"></span>
+                                             <span id="beige" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-beige.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 35€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Woodrow</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-blanche.png" id="wood">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Woodrow</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="blanc" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-blanche.png')"></span>
+                                             <span id="beige" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-beige.png')"></span>
+                                             <span id="vert" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-verte.png')"></span>
+                                             <span id="noir" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-gris.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 44,50€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Mateo</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/corbeille/mateo/mateo-19,25.png" alt="">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Mateo</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="bleuC"></span>
+                                        </div>
+                                        <a href="#">Acheter 19,25€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Velpabin</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/corbeille/velpabin/velpabin-54_90.png" alt="">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Velpabin</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="noir"></span>
+                                        </div>
+                                        <a href="#">Acheter 54,90€</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="corbeilleBot">
+                         <div class="container">
+                              <div class="card">
+                                   <p>Metal</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/corbeille/metalA/metalA-55.png" alt="">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Metal</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="gris"></span>
+                                        </div>
+                                        <a href="#">Acheter 55€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Exacompta</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png" id="exa">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Exacompta</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="bleuC" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png')"></span>
+                                             <span id="noir" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-noir.png')"></span>
+                                             <span id="rouge" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-rouge.png')"></span>
+                                             <span id="vert" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-vert.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 7,90€</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="bandeauT">
+               <hr id="intérieurP">
+               <div class="titre">
+                    <h2>Intérieur</h2>
+               </div>
+               <hr>
+          </div>
+          <div class="pageProduit">
+               <div class="corps">
+                    <div class="interieurTop">
+                         <div class="container">
+                              <div class="card">
+                                   <p>Andromeda</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/intérieur/andromeda/andromeda-750-vert-bleu.png" id="andro">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Andromeda</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="vert" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-vert-bleu.png')"></span>
+                                             <span id="blanc" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-blanc-bleu.png')"></span>
+                                             <span id="jaune" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-blanc.png')"></span>
+                                             <span id="bleu" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-bleu.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 750€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Ark</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/intérieur/ark/ark-1-blanc.png" id="ark">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Ark</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="blanc" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-blanc.png')"></span>
+                                             <span id="noir" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-gris.png')"></span>
+                                             <span id="rose" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-rose.png')"></span>
+                                             <span id="vert" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-vert.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 2€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Atmosphera</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png" id="atmo">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Atmosphera</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="noir" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png')"></span>
+                                             <span id="blanc" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-blanche.png')"></span>
+                                             <span id="rouge" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-rouge.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 60€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Push</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/intérieur/push/push-120-gris.png" id="push">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Push</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="gris" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-gris.png')"></span>
+                                             <span id="rose" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-rose.png')"></span>
+                                             <span id="bleu" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-bleu.png')"></span>
+                                             <span id="rouge" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-rouge.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 120€</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="interieurBot">
+                         <div class="container">
+                              <div class="card">
+                                   <p>Decor</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/intérieur/decor/decor-230-argent.jpg" alt="">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Decor</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="gris"></span>
+                                        </div>
+                                        <a href="#">Acheter 230€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Collecteur</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/intérieur/collecteur/collecter-200-vert.png" id="coll">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Collecteur</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="vert" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-vert.png')"></span>
+                                             <span id="jaune" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-jaune.png')"></span>
+                                             <span id="bleu" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-bleu.png')"></span>
+                                             <span id="rouge" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-rouge.png')"></span>
+                                             <span id="gris" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-gris.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 200€</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="bandeauT">
+               <hr id="exterieurP">
+               <div class="titre">
+                    <h2>extérieur</h2>
+               </div>
+               <hr>
+          </div>
+          <div class="pageProduit">
+               <div class="corps">
+                    <div class="exterieurTop">
+                         <div class="container">
+                              <div class="card">
+                                   <p>Coogee</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/extérieur/coogee/coogee-350-vert-rouge.png" id="coog">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Coogee</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="vert" onclick="changeImage('coog', '../doc/poubelle/extérieur/coogee/coogee-350-vert-rouge.png')"></span>
+                                             <span id="bleu" onclick="changeImage('coog', '../doc/poubelle/extérieur/coogee/coogee-350-bleu-jaune.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 350€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Hanko</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/extérieur/Hanko/Hanko-1250-jaune.png" id="hank">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Hanko</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="jaune" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-jaune.png')"></span>
+                                             <span id="vert" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-verte.png')"></span>
+                                             <span id="bleu" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-bleu.png')"></span>
+                                             <span id="gris" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-gris.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 1250€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Rossignol</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/extérieur/rossignol/rossignol-337-bleu.png" id="ross">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Rossignol</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="bleu" onclick="changeImage('ross', '../doc/poubelle/extérieur/rossignol/rossignol-337-bleu.png')"></span>
+                                             <span id="gris" onclick="changeImage('ross', '../doc/poubelle/extérieur/rossignol/rossignol-337-gris.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 337€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Tulipe</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/extérieur/tulipe/tulipe-215-vert.png" id="tuli">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Tulipe</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="vert" onclick="changeImage('tuli', '../doc/poubelle/extérieur/tulipe/tulipe-215-vert.png')"></span>
+                                             <span id="noir" onclick="changeImage('tuli', '../doc/poubelle/extérieur/tulipe/tulipe-215-noir.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 215€</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="exterieurBot">
+                         <div class="container">
+                              <div class="card">
+                                   <p>Conteneur</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/extérieur/conteneur/conteneur-180-jaune.png" id="cont">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Conteneur</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="jaune" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-jaune.png')"></span>
+                                             <span id="bleu" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-bleu.png')"></span>
+                                             <span id="vert" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-vert.png')"></span>
+                                             <span id="rouge" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-rouge.png')"></span>
+                                        </div>
+                                        <a href="#">Acheter 180€</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container">
+                              <div class="card">
+                                   <p>Grand Conteneur</p>
+                                   <div class="imgBx">
+                                        <img src="../doc/poubelle/extérieur/Gconteneur/Gconteneur-310-bleu.png" alt="">
+                                   </div>
+                                   <div class="contentBx">
+                                        <h2>Grand Conteneur</h2>
+                                        <div class="color">
+                                             <h3>Couleur</h3>
+                                             <span id="bleu"></span>
+                                        </div>
+                                        <a href="#">Acheter 310€</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="toggle">
+               <ion-icon name="menu" class="open"></ion-icon>
+               <ion-icon name="close" class="close"></ion-icon>
+          </div>
+          
+          <div id="scroll_to_top">
+               <a href="#titre">
+                   <img src="../doc/fleche.png" alt="">
+               </a>
+          </div>
+          <footer class="footer">
+               <p>Copyright La Bellepou</p>
+               <p>WebMaster CY Tech</p>
+          </footer>
+
+          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+          <script>
+               let toggle = document.querySelector('.toggle');
+               let menu = document.querySelector('.menu');
+               toggle.onclick = function(){
+                    toggle.classList.toggle('active')
+                    menu.classList.toggle('active')
+               }
+
+               let list = document.querySelectorAll('.list');
+               for (let i = 0; i < list.length; i++) {
+                    list[i].addEventListener('click', function() {
+                         let j = 0;
+                         while (j < list.length) {
+                              list[j++].className = 'list';
+                         }
+                         list[i].className = 'list active';
+                    });
+               }
+
+               function changeImage(element, lien){
+                    var x = document.getElementById(element).src = lien;
+               }
+          </script>
+     </body>
+</htlm>

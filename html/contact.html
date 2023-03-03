@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+     <head>
+        <meta content ="charset=UTF-8">
+        <meta name="author" lang="fr" content="Latry Ugo & Serres Valentin">
+        <title> La Bellepou | Site Officiel de Poubelles </title>
+        <link rel="stylesheet" type="text/css" href="../css/contact.css">
+    </head>
+    <body>
+          <header class="haut">
+               <h1 id="titre">La Bellepou</h1>
+          </header>
+
+          <div>
+          <nav class="menu">
+               <ul>
+                    <li class="list">
+                         <b></b>
+                         <b></b>
+                         <a href="../html/Bellepou.html">
+                              <span class="icon"><ion-icon name="home"></ion-icon></span>
+                              <span class="title">Accueil</span>
+                         </a>
+                    </li>
+                    <li class="list">
+                         <b></b>
+                         <b></b>
+                         <a href="../html/produit.html">
+                              <span class="icon"><ion-icon name="cart"></ion-icon></span>
+                              <span class="title">Produits</span>
+                         </a>
+                    </li>
+                    <li class="list">
+                         <b></b>
+                         <b></b>
+                         <a href="#">
+                              <span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
+                              <span class="title">Informations</span>
+                         </a>
+                    </li>
+                    <li class="list active">
+                         <b></b>
+                         <b></b>
+                         <a href="../html/contact.html">
+                              <span class="icon"><ion-icon name="call"></ion-icon></span>
+                              <span class="title">Contact</span>
+                         </a>
+                    </li>
+               </ul>
+          </nav>
+          </div>
+          <div class="form">
+            <h2>Contactez-nous !</h2>
+            <br>
+            <form>
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" placeholder="Votre prénom...">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" placeholder="Votre nom...">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Votre email...">
+                <label for="message">Message</label>
+                <textarea name="message" placeholder="Votre message..."></textarea>
+                <br>
+                <br>
+                <input type="submit" value="Envoyer">
+            </form>
+          </div>
+          <footer class="footer">
+               <p>Copyright La Bellepou</p>
+               <p>WebMaster CY Tech</p>
+          </footer>
+
+          <div class="toggle">
+               <ion-icon name="menu" class="open"></ion-icon>
+               <ion-icon name="close" class="close"></ion-icon>
+          </div>
+
+          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+          <script>
+               let toggle = document.querySelector('.toggle');
+               let menu = document.querySelector('.menu');
+               toggle.onclick = function(){
+                    toggle.classList.toggle('active')
+                    menu.classList.toggle('active')
+               }
+
+               let list = document.querySelectorAll('.list');
+               for (let i = 0; i < list.length; i++) {
+                    list[i].addEventListener('click', function() {
+                         let j = 0;
+                         while (j < list.length) {
+                              list[j++].className = 'list';
+                         }
+                         list[i].className = 'list active';
+                    });
+               }
+          </script>
+    </body>
+</htlm>
