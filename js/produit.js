@@ -1,5 +1,6 @@
-function changeImage(element, lien){
-    var x = document.getElementById(element).src = lien;
+function changeImage(element, lien, bc){
+    document.getElementById(element).src = lien;
+    document.getElementById(bc).style.backgroundImage = "url(" + lien + ")";
 }
 
 
@@ -24,6 +25,16 @@ function apparition(e, lien){
     var img = document.getElementById(lien);
     img.style.transition ="opacity 0.5s";
     img.style.opacity ="0";
-    div.style.transition ="opacity 0s";
+    div.style.backgroundRepeat ="no-repeat";
     div.style.backgroundSize = "550px";
+}
+
+function affStock(para){
+    var id = document.getElementById(para);
+    if(id.style.visibility === "hidden"){
+        id.style.visibility = "visible";
+    }
+    else{
+        id.style.visibility ="hidden";
+    }
 }
