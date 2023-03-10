@@ -1,10 +1,9 @@
 html{
     scroll-behavior: smooth;
 }
-
 .corps{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: 90px;
+    margin-left: 9%;
 }
 
 #catPhrase{
@@ -14,16 +13,16 @@ html{
 }
 
 .boutonProd{
-    margin-top: 25px;
+    margin-top: 5%;
 }
 
 #boutonProduit{
-    padding: 12px 36px;
-    margin: 10px 0;
+    padding: 3% 10%;
+    margin: 5% 0;
     color: #F1FAEE;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 60%;
     letter-spacing: 2px;
     border-radius: 40px;
     background: linear-gradient(90deg, #E63946, #457B9D );
@@ -48,9 +47,11 @@ html{
 
 .imagePres{
     line-height: 0;
-    margin: 0 0 10px;
+    margin: 0 0 5%;
 }
-
+.presentation .presPoub .carte .imagePres img{
+    width: 50%;
+}
 img{
     overflow-clip-margin: content-box;
     overflow: clip;
@@ -117,18 +118,19 @@ img{
 
 .container .card{
     position: relative;
-    width: 320px;
+    width: 75%;
     height: 450px;
     background: #457B9D;
     border-radius: 20px;
     overflow: hidden;
+    min-width: none;
 }
 
 .container .card p{
     position: relative;
     top: 50%;
     text-align: center;
-    font-size: 3em;
+    font-size: 300%;
     font-weight: 800;
     font-style: italic;
     color: rgba(255,255,255,0.1);
@@ -186,7 +188,7 @@ img{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 220px;
+    width: 70%;
     cursor: zoom-in;
 } 
 
@@ -307,10 +309,14 @@ img{
 
 .bandeauP{
     background-color:#E63946;
-    margin-bottom: 50px;
+    margin-bottom: 5%;
     text-transform: uppercase;
+    height: 5%;
 }
 
+.bandeauP .titre{
+    font-size: 80%;
+}
 #scroll_to_top {
     position: fixed;
     width: 50px;
@@ -327,3 +333,37 @@ img{
     margin-top: 5px;
     width: 40px;
 }
+
+.container .card .contentBx .stock{
+    margin-top: 10px;
+    display: inline-flex;
+    
+}
+
+.container .card .contentBx .stock button{
+    border-radius: 4px;
+    padding: 10px 20px;
+    background: #F1FAEE;
+    border-style: none;
+    font-weight: 600;
+    color: #1D3557;
+    transform: translate(50px);
+    transition: 0.5s;
+    opacity: 0;
+    margin-right: 6px;
+}
+
+.container .card:hover .contentBx .stock button{
+    opacity: 1;
+    transform: translate(0px);
+    transition-delay: 1s;
+}
+
+.container .card .contentBx .stock p{
+    color: #1D3557;
+    font-size: 15px;
+    margin-top: 9.5px;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    visibility: hidden;
+} 
