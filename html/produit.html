@@ -18,7 +18,7 @@
                     <li class="list">
                          <b></b>
                          <b></b>
-                         <a href="../html/Bellepou.html">
+                         <a href="../index.html">
                               <span class="icon"><ion-icon name="home"></ion-icon></span>
                               <span class="title">Accueil</span>
                          </a>
@@ -57,7 +57,7 @@
                     <div  class="presPoub">
                          <div class="carte">
                               <div class="imagePres">
-                                   <img id="presCorbeille" src="../doc/poubelle/corbeille/presCorb.png" alt="presentation corbeille" height="300">
+                                   <img id="presCorbeille" src="../doc/poubelle/corbeille/presCorb.png" alt="presentation corbeille" >
                               </div>
                               <div class="boutonProd">
                                    <a id="boutonProduit" href="#corbeilleP">Corbeilles</a>
@@ -67,20 +67,20 @@
                     <div class="presPoub">
                          <div class="carte">
                               <div class="imagePres">
-                                   <img id="presIntérieur" src="../doc/poubelle/intérieur/presInt.png" alt="présentation interieur" height="300">
+                                   <img id="presIntérieur" src="../doc/poubelle/intérieur/presInt.png" alt="présentation interieur" >
                               </div>
                               <div class="boutonProd">
-                                   <a id="boutonProduit" href="#intérieurP">Poubelles Intérieures</a>
+                                   <a id="boutonProduit" href="#intérieurP">Intérieures</a>
                               </div>
                          </div>
                     </div>
                     <div class="presPoub">
                          <div class="carte">
                               <div class="imagePres">
-                                   <img id="presExtérieur" src="../doc/poubelle/extérieur/presExte.png" alt="présentation extérieur" height="300">
+                                   <img id="presExtérieur" src="../doc/poubelle/extérieur/presExte.png" alt="présentation extérieur">
                               </div>
                               <div class="boutonProd">
-                                   <a id="boutonProduit" href="#exterieurP">Poubelles Extérieures</a>
+                                   <a id="boutonProduit" href="#exterieurP">Extérieures</a>
                               </div>
                          </div>
                     </div>
@@ -103,36 +103,41 @@
                          <div class="container">
                               <div class="card">
                                    <p>Dunkelgruen</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'dunkel')" style="background-image: url(../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png); background-size: 0px;" onmouseleave="disparition(event, 'dunkel')" onmouseenter="apparition(event, 'dunkel')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'dunkel')" style="background-image: url(../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png); background-size: 0px;" onmouseleave="disparition(event, 'dunkel')" onmouseenter="apparition(event, 'dunkel')" id="imgBxDunkel">
                                         <img src="../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png" id="dunkel">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Dunkelgruen</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="bleu" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png')"></span>
-                                             <span id="rouge" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-rouge.png')"></span>
-                                             <span id="blanc" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-blanc.png')"></span>
-                                             <span id="beige" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-beige.png')"></span>
+                                             <span id="bleu" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png', 'imgBxDunkel')"></span>
+                                             <span id="rouge" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-rouge.png', 'imgBxDunkel')"></span>
+                                             <span id="blanc" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-blanc.png', 'imgBxDunkel')"></span>
+                                             <span id="beige" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-beige.png', 'imgBxDunkel')"></span>
                                         </div>
                                         <a href="#">Acheter 35€</a>
+                                        <br>
+                                        <div class="stock">
+                                             <button id="sDunk" onclick="affStock('DunkStock')">Stock</button>
+                                             <p id="DunkStock"> Stock :</p>
+                                        </div>
                                    </div>
                               </div>
                          </div>
                          <div class="container">
                               <div class="card">
                                    <p>Woodrow</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'dunkel')" style="background-image: url(../doc/poubelle/corbeille/wooddrow/wooddrow-44\,50-blanche.png); background-size: 0px;" onmouseleave="disparition(event, 'wood')" onmouseenter="apparition(event, 'wood')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'dunkel')" style="background-image: url(../doc/poubelle/corbeille/wooddrow/wooddrow-44\,50-blanche.png); background-size: 0px;" onmouseleave="disparition(event, 'wood')" onmouseenter="apparition(event, 'wood')" id="imgBxWood">
                                         <img src="../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-blanche.png" id="wood" >
                                    </div>
                                    <div class="contentBx">
                                         <h2>Woodrow</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="blanc" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-blanche.png')"></span>
-                                             <span id="beige" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-beige.png')"></span>
-                                             <span id="vert" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-verte.png')"></span>
-                                             <span id="noir" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-gris.png')"></span>
+                                             <span id="blanc" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-blanche.png', 'imgBxWood')"></span>
+                                             <span id="beige" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-beige.png', 'imgBxWood')"></span>
+                                             <span id="vert" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-verte.png', 'imgBxWood')"></span>
+                                             <span id="noir" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-gris.png', 'imgBxWood')"></span>
                                         </div>
                                         <a href="#">Acheter 44,50€</a>
                                    </div>
@@ -191,17 +196,17 @@
                          <div class="container">
                               <div class="card">
                                    <p>Exacompta</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'exa')" style="background-image: url(../doc/poubelle/corbeille/exacompta/exacompta-7\,90-bleu.png); background-size: 0px;" onmouseleave="disparition(event, 'exa')" onmouseenter="apparition(event, 'exa')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'exa')" style="background-image: url(../doc/poubelle/corbeille/exacompta/exacompta-7\,90-bleu.png); background-size: 0px;" onmouseleave="disparition(event, 'exa')" onmouseenter="apparition(event, 'exa')" id="ImgBxExa">
                                         <img src="../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png" id="exa">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Exacompta</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="bleuC" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png')"></span>
-                                             <span id="noir" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-noir.png')"></span>
-                                             <span id="rouge" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-rouge.png')"></span>
-                                             <span id="vert" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-vert.png')"></span>
+                                             <span id="bleuC" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png', 'ImgBxExa')"></span>
+                                             <span id="noir" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-noir.png', 'ImgBxExa')"></span>
+                                             <span id="rouge" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-rouge.png', 'ImgBxExa')"></span>
+                                             <span id="vert" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-vert.png', 'ImgBxExa')"></span>
                                         </div>
                                         <a href="#">Acheter 7,90€</a>
                                    </div>
@@ -223,17 +228,17 @@
                          <div class="container">
                               <div class="card">
                                    <p>Andromeda</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'andro')" style="background-image: url(../doc/poubelle/intérieur/andromeda/andromeda-750-blanc-bleu.png); background-size: 0px;" onmouseleave="disparition(event, 'andro')" onmouseenter="apparition(event, 'andro')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'andro')" style="background-image: url(../doc/poubelle/intérieur/andromeda/andromeda-750-blanc-bleu.png); background-size: 0px;" onmouseleave="disparition(event, 'andro')" onmouseenter="apparition(event, 'andro')" id="ImgBxAndro">
                                         <img src="../doc/poubelle/intérieur/andromeda/andromeda-750-vert-bleu.png" id="andro">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Andromeda</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="vert" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-vert-bleu.png')"></span>
-                                             <span id="blanc" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-blanc-bleu.png')"></span>
-                                             <span id="jaune" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-blanc.png')"></span>
-                                             <span id="bleu" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-bleu.png')"></span>
+                                             <span id="vert" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-vert-bleu.png', 'ImgBxAndro')"></span>
+                                             <span id="blanc" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-blanc-bleu.png', 'ImgBxAndro')"></span>
+                                             <span id="jaune" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-blanc.png', 'ImgBxAndro')"></span>
+                                             <span id="bleu" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-bleu.png', 'ImgBxAndro')"></span>
                                         </div>
                                         <a href="#">Acheter 750€</a>
                                    </div>
@@ -242,17 +247,17 @@
                          <div class="container">
                               <div class="card">
                                    <p>Ark</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'ark')" style="background-image: url(../doc/poubelle/intérieur/ark/ark-1-blanc.png); background-size: 0px;" onmouseleave="disparition(event, 'ark')" onmouseenter="apparition(event, 'ark')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'ark')" style="background-image: url(../doc/poubelle/intérieur/ark/ark-1-blanc.png); background-size: 0px;" onmouseleave="disparition(event, 'ark')" onmouseenter="apparition(event, 'ark')" id="ImgBxArk">
                                         <img src="../doc/poubelle/intérieur/ark/ark-1-blanc.png" id="ark">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Ark</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="blanc" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-blanc.png')"></span>
-                                             <span id="noir" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-gris.png')"></span>
-                                             <span id="rose" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-rose.png')"></span>
-                                             <span id="vert" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-vert.png')"></span>
+                                             <span id="blanc" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-blanc.png', 'ImgBxArk')"></span>
+                                             <span id="noir" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-gris.png', 'ImgBxArk')"></span>
+                                             <span id="rose" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-rose.png', 'ImgBxArk')"></span>
+                                             <span id="vert" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-vert.png', 'ImgBxArk')"></span>
                                         </div>
                                         <a href="#">Acheter 2€</a>
                                    </div>
@@ -261,16 +266,16 @@
                          <div class="container">
                               <div class="card">
                                    <p>Atmosphera</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'atmo')" style="background-image: url(../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png); background-size: 0px;" onmouseleave="disparition(event, 'atmo')" onmouseenter="apparition(event, 'atmo')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'atmo')" style="background-image: url(../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png); background-size: 0px;" onmouseleave="disparition(event, 'atmo')" onmouseenter="apparition(event, 'atmo')" id="ImgBxAtmo">
                                         <img src="../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png" id="atmo">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Atmosphera</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="noir" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png')"></span>
-                                             <span id="blanc" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-blanche.png')"></span>
-                                             <span id="rouge" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-rouge.png')"></span>
+                                             <span id="noir" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png', 'ImgBxAtmo')"></span>
+                                             <span id="blanc" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-blanche.png', 'ImgBxAtmo')"></span>
+                                             <span id="rouge" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-rouge.png', 'ImgBxAtmo')"></span>
                                         </div>
                                         <a href="#">Acheter 60€</a>
                                    </div>
@@ -279,17 +284,17 @@
                          <div class="container">
                               <div class="card">
                                    <p>Push</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'push')" style="background-image: url(../doc/poubelle/intérieur/push/push-120-gris.png); background-size: 0px;" onmouseleave="disparition(event, 'push')" onmouseenter="apparition(event, 'push')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'push')" style="background-image: url(../doc/poubelle/intérieur/push/push-120-gris.png); background-size: 0px;" onmouseleave="disparition(event, 'push')" onmouseenter="apparition(event, 'push')" id="ImgBxPush">
                                         <img src="../doc/poubelle/intérieur/push/push-120-gris.png" id="push">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Push</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="gris" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-gris.png')"></span>
-                                             <span id="rose" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-rose.png')"></span>
-                                             <span id="bleu" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-bleu.png')"></span>
-                                             <span id="rouge" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-rouge.png')"></span>
+                                             <span id="gris" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-gris.png', 'ImgBxPush')"></span>
+                                             <span id="rose" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-rose.png', 'ImgBxPush')"></span>
+                                             <span id="bleu" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-bleu.png', 'ImgBxPush')"></span>
+                                             <span id="rouge" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-rouge.png', 'ImgBxPush')"></span>
                                         </div>
                                         <a href="#">Acheter 120€</a>
                                    </div>
@@ -316,18 +321,18 @@
                          <div class="container">
                               <div class="card">
                                    <p>Collecteur</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'coll')" style="background-image: url(../doc/poubelle/intérieur/collecteur/collecter-200-vert.png); background-size: 0px;" onmouseleave="disparition(event, 'coll')" onmouseenter="apparition(event, 'coll')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'coll')" style="background-image: url(../doc/poubelle/intérieur/collecteur/collecter-200-vert.png); background-size: 0px;" onmouseleave="disparition(event, 'coll')" onmouseenter="apparition(event, 'coll')" id="ImgBxColl">
                                         <img src="../doc/poubelle/intérieur/collecteur/collecter-200-vert.png" id="coll">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Collecteur</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="vert" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-vert.png')"></span>
-                                             <span id="jaune" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-jaune.png')"></span>
-                                             <span id="bleu" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-bleu.png')"></span>
-                                             <span id="rouge" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-rouge.png')"></span>
-                                             <span id="gris" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-gris.png')"></span>
+                                             <span id="vert" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-vert.png', 'ImgBxColl')"></span>
+                                             <span id="jaune" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-jaune.png', 'ImgBxColl')"></span>
+                                             <span id="bleu" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-bleu.png', 'ImgBxColl')"></span>
+                                             <span id="rouge" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-rouge.png', 'ImgBxColl')"></span>
+                                             <span id="gris" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-gris.png', 'ImgBxColl')"></span>
                                         </div>
                                         <a href="#">Acheter 200€</a>
                                    </div>
@@ -349,15 +354,15 @@
                          <div class="container">
                               <div class="card">
                                    <p>Coogee</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'coog')" style="background-image: url(../doc/poubelle/extérieur/coogee/coogee-350-vert-rouge.png); background-size: 0px;" onmouseleave="disparition(event, 'coog')" onmouseenter="apparition(event, 'coog')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'coog')" style="background-image: url(../doc/poubelle/extérieur/coogee/coogee-350-vert-rouge.png); background-size: 0px;" onmouseleave="disparition(event, 'coog')" onmouseenter="apparition(event, 'coog')" id="ImgBxCoog">
                                         <img src="../doc/poubelle/extérieur/coogee/coogee-350-vert-rouge.png" id="coog">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Coogee</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="vert" onclick="changeImage('coog', '../doc/poubelle/extérieur/coogee/coogee-350-vert-rouge.png')"></span>
-                                             <span id="bleu" onclick="changeImage('coog', '../doc/poubelle/extérieur/coogee/coogee-350-bleu-jaune.png')"></span>
+                                             <span id="vert" onclick="changeImage('coog', '../doc/poubelle/extérieur/coogee/coogee-350-vert-rouge.png', 'ImgBxCoog')"></span>
+                                             <span id="bleu" onclick="changeImage('coog', '../doc/poubelle/extérieur/coogee/coogee-350-bleu-jaune.png', 'ImgBxCoog')"></span>
                                         </div>
                                         <a href="#">Acheter 350€</a>
                                    </div>
@@ -366,17 +371,17 @@
                          <div class="container">
                               <div class="card">
                                    <p>Hanko</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'hank')" style="background-image: url(../doc/poubelle/extérieur/Hanko/Hanko-1250-jaune.png); background-size: 0px;" onmouseleave="disparition(event, 'hank')" onmouseenter="apparition(event, 'hank')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'hank')" style="background-image: url(../doc/poubelle/extérieur/Hanko/Hanko-1250-jaune.png); background-size: 0px;" onmouseleave="disparition(event, 'hank')" onmouseenter="apparition(event, 'hank')" id="ImgBxHank">
                                         <img src="../doc/poubelle/extérieur/Hanko/Hanko-1250-jaune.png" id="hank">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Hanko</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="jaune" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-jaune.png')"></span>
-                                             <span id="vert" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-verte.png')"></span>
-                                             <span id="bleu" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-bleu.png')"></span>
-                                             <span id="gris" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-gris.png')"></span>
+                                             <span id="jaune" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-jaune.png', 'ImgBxHank')"></span>
+                                             <span id="vert" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-verte.png', 'ImgBxHank')"></span>
+                                             <span id="bleu" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-bleu.png', 'ImgBxHank')"></span>
+                                             <span id="gris" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-gris.png', 'ImgBxHank')"></span>
                                         </div>
                                         <a href="#">Acheter 1250€</a>
                                    </div>
@@ -385,15 +390,15 @@
                          <div class="container">
                               <div class="card">
                                    <p>Rossignol</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'ross')" style="background-image: url(../doc/poubelle/extérieur/rossignol/rossignol-337-bleu.png); background-size: 0px;" onmouseleave="disparition(event, 'ross')" onmouseenter="apparition(event, 'ross')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'ross')" style="background-image: url(../doc/poubelle/extérieur/rossignol/rossignol-337-bleu.png); background-size: 0px;" onmouseleave="disparition(event, 'ross')" onmouseenter="apparition(event, 'ross')" id="ImgBxRoss">
                                         <img src="../doc/poubelle/extérieur/rossignol/rossignol-337-bleu.png" id="ross">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Rossignol</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="bleu" onclick="changeImage('ross', '../doc/poubelle/extérieur/rossignol/rossignol-337-bleu.png')"></span>
-                                             <span id="gris" onclick="changeImage('ross', '../doc/poubelle/extérieur/rossignol/rossignol-337-gris.png')"></span>
+                                             <span id="bleu" onclick="changeImage('ross', '../doc/poubelle/extérieur/rossignol/rossignol-337-bleu.png', 'ImgBxRoss')"></span>
+                                             <span id="gris" onclick="changeImage('ross', '../doc/poubelle/extérieur/rossignol/rossignol-337-gris.png', 'ImgBxRoss')"></span>
                                         </div>
                                         <a href="#">Acheter 337€</a>
                                    </div>
@@ -402,15 +407,15 @@
                          <div class="container">
                               <div class="card">
                                    <p>Tulipe</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'tuli')" style="background-image: url(../doc/poubelle/extérieur/tulipe/tulipe-215-vert.png); background-size: 0px;" onmouseleave="disparition(event, 'tuli')" onmouseenter="apparition(event, 'tuli')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'tuli')" style="background-image: url(../doc/poubelle/extérieur/tulipe/tulipe-215-vert.png); background-size: 0px;" onmouseleave="disparition(event, 'tuli')" onmouseenter="apparition(event, 'tuli')" id="ImgBxTuli">
                                         <img src="../doc/poubelle/extérieur/tulipe/tulipe-215-vert.png" id="tuli">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Tulipe</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="vert" onclick="changeImage('tuli', '../doc/poubelle/extérieur/tulipe/tulipe-215-vert.png')"></span>
-                                             <span id="noir" onclick="changeImage('tuli', '../doc/poubelle/extérieur/tulipe/tulipe-215-noir.png')"></span>
+                                             <span id="vert" onclick="changeImage('tuli', '../doc/poubelle/extérieur/tulipe/tulipe-215-vert.png', 'ImgBxTuli')"></span>
+                                             <span id="noir" onclick="changeImage('tuli', '../doc/poubelle/extérieur/tulipe/tulipe-215-noir.png', 'ImgBxTuli')"></span>
                                         </div>
                                         <a href="#">Acheter 215€</a>
                                    </div>
@@ -421,17 +426,17 @@
                          <div class="container">
                               <div class="card">
                                    <p>Conteneur</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'cont')" style="background-image: url(../doc/poubelle/extérieur/conteneur/conteneur-180-jaune.png); background-size: 0px;" onmouseleave="disparition(event, 'cont')" onmouseenter="apparition(event, 'cont')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'cont')" style="background-image: url(../doc/poubelle/extérieur/conteneur/conteneur-180-jaune.png); background-size: 0px;" onmouseleave="disparition(event, 'cont')" onmouseenter="apparition(event, 'cont')" id="ImgBxCont">
                                         <img src="../doc/poubelle/extérieur/conteneur/conteneur-180-jaune.png" id="cont">
                                    </div>
                                    <div class="contentBx">
                                         <h2>Conteneur</h2>
                                         <div class="color">
                                              <h3>Couleur</h3>
-                                             <span id="jaune" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-jaune.png')"></span>
-                                             <span id="bleu" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-bleu.png')"></span>
-                                             <span id="vert" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-vert.png')"></span>
-                                             <span id="rouge" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-rouge.png')"></span>
+                                             <span id="jaune" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-jaune.png', 'ImgBxCont')"></span>
+                                             <span id="bleu" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-bleu.png', 'ImgBxCont')"></span>
+                                             <span id="vert" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-vert.png', 'ImgBxCont')"></span>
+                                             <span id="rouge" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-rouge.png', 'ImgBxCont')"></span>
                                         </div>
                                         <a href="#">Acheter 180€</a>
                                    </div>
