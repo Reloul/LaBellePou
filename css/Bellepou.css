@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box; 
     font-family: 'Times New Roman', Times, serif;
+    white-space: nowrap;
 }
 #body{
     margin: 0;
@@ -48,25 +49,26 @@ body{
     position: fixed;
     top: 20px;
     bottom: 20px;
-    width: 70px;
+    width: 0px;
+    visibility: hidden;
     border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
     box-sizing: initial;
     border-left: 5px solid #A8DADC;
     background: #A8DADC;
     transition : 0.5s;
     overflow-x: hidden;
-    box-shadow: 10px 0 0 #F1FAEE;
+    box-shadow: 5px 0 0 #F1FAEE;
     z-index: 10;
 }
 
 .menu.active{
     width: 300px;
+    visibility: visible;
 }
 
 .menu ul{
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 0;
     width: 100%;
     padding-left: 5px;
@@ -176,18 +178,24 @@ body{
     position: fixed;
     top: 20px;
     right: 20px;
+    left: 0;
     width: 50px;
     height: 50px;
     background: #F1FAEE;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: visible;
+    transition: 0.5s;
+    z-index: 3;
 }
 
 .toggle.active{
     background: #F1FAEE;
+    left: 310px;
 }
 
 .toggle ion-icon{
@@ -252,3 +260,22 @@ footer{
     color: #F1FAEE;
 }
 
+@media screen and (max-width: 11768px) {
+    .toggle{
+        width: 75px;
+        height: 75px;
+    }
+
+
+    .menu ul li a{
+        align-items: center;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .menu ul li a .icon{
+        font-size: 20px;
+    }
+    
+
+}
