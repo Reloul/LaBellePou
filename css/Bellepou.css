@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     white-space: nowrap;
 }
 #body{
@@ -49,14 +49,17 @@ body{
     position: fixed;
     top: 20px;
     bottom: 20px;
+    width: 70px;
     width: 0px;
     visibility: hidden;
     border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
     box-sizing: initial;
     border-left: 5px solid #A8DADC;
     background: #A8DADC;
     transition : 0.5s;
     overflow-x: hidden;
+    box-shadow: 10px 0 0 #F1FAEE;
     box-shadow: 5px 0 0 #F1FAEE;
     z-index: 10;
 }
@@ -178,10 +181,11 @@ body{
     position: fixed;
     top: 20px;
     right: 20px;
-    left: 0;
     width: 50px;
+    left: 0;
     height: 50px;
     background: #F1FAEE;
+    border-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     cursor: pointer;
@@ -236,6 +240,32 @@ footer{
     z-index: -1;
 }
 
+.vid p{
+    color: #F1FAEE;
+    font-size: 2em;
+    bottom: 3em;
+    float: right;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+.vid #pseudo{
+    margin-right: 1em;
+}
+
+.vid #logo{
+    margin-right: 5px;
+    bottom: 2.9em;
+}
+
+.vid .credit{
+    display: inline-flex;
+    float: right;
+}
+.vid{
+    height: 45em;
+}
+
 .bouton{
     margin-top: 25px;
     margin-left: 90px;
@@ -276,6 +306,6 @@ footer{
     .menu ul li a .icon{
         font-size: 20px;
     }
-    
+
 
 }
