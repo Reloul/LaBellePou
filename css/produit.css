@@ -119,7 +119,7 @@ img{
 .container .card{
     position: relative;
     width: 75%;
-    height: 450px;
+    height: 30em;
     background: #457B9D;
     border-radius: 20px;
     overflow: hidden;
@@ -336,8 +336,6 @@ img{
 
 .container .card .contentBx .stock{
     margin-top: 10px;
-    display: inline-flex;
-    
 }
 
 .container .card .contentBx .stock button{
@@ -350,20 +348,62 @@ img{
     transform: translate(50px);
     transition: 0.5s;
     opacity: 0;
-    margin-right: 6px;
+    display:inline-flex;
 }
 
 .container .card:hover .contentBx .stock button{
     opacity: 1;
     transform: translate(0px);
     transition-delay: 1s;
+    cursor: pointer;
 }
 
-.container .card .contentBx .stock p{
+
+.container .card .contentBx .stock .allStock{
     color: #1D3557;
-    font-size: 15px;
-    margin-top: 9.5px;
-    align-items: center;
+    margin-left: 5px;
+    margin-top: 1px;
+    font-size: 14px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     visibility: hidden;
+    width: 0;
 } 
+
+.container  .card .contentBx .commande .quantite input{
+    width: 2em;
+    background-color: #F1FAEE;
+    border-style: none;
+    text-align: center;
+}
+
+.container  .card .contentBx .commande .quantite button{
+    width: 2em;
+    background-color: #F1FAEE;
+    border-style: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.container  .card .contentBx .commande{
+    display: inline-flex;
+}
+
+.container  .card .contentBx .commande .quantite{
+    margin-left: 1em;
+    transform: translate(50px);
+    transition: 0.5s;
+    opacity: 0;
+    background-color: #F1FAEE;
+    border-radius: 4px;
+    padding-top: 5px;
+    margin-top: 0.8em;
+    height: 2em;
+    font-size: 1em;
+    display: inline-block;
+}
+
+.container  .card:hover .contentBx .commande .quantite{
+    opacity: 1;
+    transform: translate(0px);
+    transition-delay: 0.8s;
+}
