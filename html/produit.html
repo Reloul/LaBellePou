@@ -115,11 +115,18 @@
                                              <span id="blanc" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-blanc.png', 'imgBxDunkel')"></span>
                                              <span id="beige" onclick="changeImage('dunkel', '../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-beige.png', 'imgBxDunkel')"></span>
                                         </div>
-                                        <a href="#">Acheter 35€</a>
-                                        <br>
+                                        <div class="commande">
+                                             <a href="#">Acheter 35€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsDunk" onclick="moins('quantDunkel', 'moinsDunk', 'plusDunk')">-</button>
+                                                  <input type="text" value="0" readonly id="quantDunkel">
+                                                  <button id="plusDunk" onclick="plus('quantDunkel', 'DunkStock', 'moinsDunk', 'plusDunk')">+</button>
+                                             </div>
+                                        </div>
                                         <div class="stock">
-                                             <button id="sDunk" onclick="affStock('DunkStock')">Stock</button>
-                                             <p id="DunkStock"> Stock :</p>
+                                             <button type="button" id="sDunk" onclick="affStock('DunkStock')">Stock 
+                                                  <div class="allStock" id="DunkStock">192</div>
+                                             </button>
                                         </div>
                                    </div>
                               </div>
@@ -127,7 +134,7 @@
                          <div class="container">
                               <div class="card">
                                    <p>Woodrow</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'dunkel')" style="background-image: url(../doc/poubelle/corbeille/wooddrow/wooddrow-44\,50-blanche.png); background-size: 0px;" onmouseleave="disparition(event, 'wood')" onmouseenter="apparition(event, 'wood')" id="imgBxWood">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'wood')" style="background-image: url(../doc/poubelle/corbeille/wooddrow/wooddrow-44\,50-blanche.png); background-size: 0px;" onmouseleave="disparition(event, 'wood')" onmouseenter="apparition(event, 'wood')" id="imgBxWood">
                                         <img src="../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-blanche.png" id="wood" >
                                    </div>
                                    <div class="contentBx">
@@ -139,14 +146,26 @@
                                              <span id="vert" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-verte.png', 'imgBxWood')"></span>
                                              <span id="noir" onclick="changeImage('wood', '../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-gris.png', 'imgBxWood')"></span>
                                         </div>
-                                        <a href="#">Acheter 44,50€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 44.50€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsWood" onclick="moins('quantWood', 'moinsWood', 'plusWood')">-</button>
+                                                  <input type="text" value="0" readonly id="quantWood">
+                                                  <button id="plusWood" onclick="plus('quantWood', 'WoodStock', 'moinsWood', 'plusWood')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sWood" onclick="affStock('WoodStock')">Stock 
+                                                  <div class="allStock" id="WoodStock">347</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
                          <div class="container">
                               <div class="card">
                                    <p>Mateo</p>
-                                   <div class="imgBx" onmousemove="zoomImg(event, 'dunkel')" style="background-image: url(../doc/poubelle/corbeille/mateo/mateo-19\,25.png); background-size: 0px;" onmouseleave="disparition(event, 'mateo')" onmouseenter="apparition(event, 'mateo')">
+                                   <div class="imgBx" onmousemove="zoomImg(event, 'mateo')" style="background-image: url(../doc/poubelle/corbeille/mateo/mateo-19\,25.png); background-size: 0px;" onmouseleave="disparition(event, 'mateo')" onmouseenter="apparition(event, 'mateo')">
                                         <img src="../doc/poubelle/corbeille/mateo/mateo-19,25.png" id="mateo">
                                    </div>
                                    <div class="contentBx">
@@ -155,7 +174,19 @@
                                              <h3>Couleur</h3>
                                              <span id="bleuC"></span>
                                         </div>
-                                        <a href="#">Acheter 19,25€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 19.25€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsMat" onclick="moins('quantMat', 'moinsMat', 'plusMat')">-</button>
+                                                  <input type="text" value="0" readonly id="quantMat">
+                                                  <button id="plusMat" onclick="plus('quantMat', 'MateoStock', 'moinsMat', 'plusMat')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sMateo" onclick="affStock('MateoStock')">Stock 
+                                                  <div class="allStock" id="MateoStock">415</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -171,7 +202,19 @@
                                              <h3>Couleur</h3>
                                              <span id="noir"></span>
                                         </div>
-                                        <a href="#">Acheter 54,90€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 54.90€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsVelp" onclick="moins('quantVelp', 'moinsVelp', 'plusVelp')">-</button>
+                                                  <input type="text" value="0" readonly id="quantVelp">
+                                                  <button id="plusVelp" onclick="plus('quantVelp', 'VelpStock', 'moinsVelp', 'plusVelp')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sVelp" onclick="affStock('VelpStock')">Stock 
+                                                  <div class="allStock" id="VelpStock">175</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -189,7 +232,19 @@
                                              <h3>Couleur</h3>
                                              <span id="gris"></span>
                                         </div>
-                                        <a href="#">Acheter 55€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 55€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsMet" onclick="moins('quantMet', 'moinsMet', 'plusMet')">-</button>
+                                                  <input type="text" value="0" readonly id="quantMet">
+                                                  <button id="plusMet" onclick="plus('quantMet', 'MetalStock', 'moinsMet', 'plusMet')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sMetal" onclick="affStock('MetalStock')">Stock 
+                                                  <div class="allStock" id="MetalStock">58</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -208,7 +263,19 @@
                                              <span id="rouge" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-rouge.png', 'ImgBxExa')"></span>
                                              <span id="vert" onclick="changeImage('exa', '../doc/poubelle/corbeille/exacompta/exacompta-7,90-vert.png', 'ImgBxExa')"></span>
                                         </div>
-                                        <a href="#">Acheter 7,90€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 7.90€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsExa" onclick="moins('quantExa', 'moinsExa', 'plusExa')">-</button>
+                                                  <input type="text" value="0" readonly id="quantExa">
+                                                  <button id="plusExa" onclick="plus('quantExa', 'ExaStock', 'moinsExa', 'plusExa')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sExa" onclick="affStock('ExaStock')">Stock 
+                                                  <div class="allStock" id="ExaStock">854</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -240,7 +307,19 @@
                                              <span id="jaune" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-blanc.png', 'ImgBxAndro')"></span>
                                              <span id="bleu" onclick="changeImage('andro', '../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-bleu.png', 'ImgBxAndro')"></span>
                                         </div>
-                                        <a href="#">Acheter 750€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 750€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsAnd" onclick="moins('quantAnd', 'moinsAnd', 'plusAnd')">-</button>
+                                                  <input type="text" value="0" readonly id="quantAnd">
+                                                  <button id="plusAnd" onclick="plus('quantAnd', 'AndroStock', 'moinsand', 'plusAnd')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sAndro" onclick="affStock('AndroStock')">Stock 
+                                                  <div class="allStock" id="AndroStock">124</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -259,7 +338,19 @@
                                              <span id="rose" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-rose.png', 'ImgBxArk')"></span>
                                              <span id="vert" onclick="changeImage('ark', '../doc/poubelle/intérieur/ark/ark-1-vert.png', 'ImgBxArk')"></span>
                                         </div>
-                                        <a href="#">Acheter 2€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 2€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsArk" onclick="moins('quantArk', 'moinsArk', 'plusArk')">-</button>
+                                                  <input type="text" value="0" readonly id="quantArk">
+                                                  <button id="plusArk" onclick="plus('quantArk', 'ArkStock', 'moinsArk', 'plusArk')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sArk" onclick="affStock('ArkStock')">Stock 
+                                                  <div class="allStock" id="ArkStock">541</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -277,7 +368,19 @@
                                              <span id="blanc" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-blanche.png', 'ImgBxAtmo')"></span>
                                              <span id="rouge" onclick="changeImage('atmo', '../doc/poubelle/intérieur/atmosphera/atmosphera-60-rouge.png', 'ImgBxAtmo')"></span>
                                         </div>
-                                        <a href="#">Acheter 60€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 60€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsAtm" onclick="moins('quantAtm', 'moinsAtm', 'plusAtm')">-</button>
+                                                  <input type="text" value="0" readonly id="quantAtm">
+                                                  <button id="plusAtm" onclick="plus('quantAtm', 'AtmoStock', 'moinsAtm', 'plusAtm')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sAtmo" onclick="affStock('AtmoStock')">Stock 
+                                                  <div class="allStock" id="AtmoStock">687</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -296,7 +399,19 @@
                                              <span id="bleu" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-bleu.png', 'ImgBxPush')"></span>
                                              <span id="rouge" onclick="changeImage('push', '../doc/poubelle/intérieur/push/push-120-rouge.png', 'ImgBxPush')"></span>
                                         </div>
-                                        <a href="#">Acheter 120€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 120€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsPus" onclick="moins('quantPus', 'moinsPus', 'plusPus')">-</button>
+                                                  <input type="text" value="0" readonly id="quantPus">
+                                                  <button id="plusPus" onclick="plus('quantPus', 'PushStock', 'moinsPus', 'plusPus')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sPush" onclick="affStock('PushStock')">Stock 
+                                                  <div class="allStock" id="PushStock">743</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -314,7 +429,19 @@
                                              <h3>Couleur</h3>
                                              <span id="gris"></span>
                                         </div>
-                                        <a href="#">Acheter 230€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 230€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsDec" onclick="moins('quantDec', 'moinsDec', 'plusDec')">-</button>
+                                                  <input type="text" value="0" readonly id="quantDec">
+                                                  <button id="plusDec" onclick="plus('quantDec', 'DecoStock', 'moinsDec', 'plusDec')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sDeco" onclick="affStock('DecoStock')">Stock 
+                                                  <div class="allStock" id="DecoStock">419</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -334,7 +461,19 @@
                                              <span id="rouge" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-rouge.png', 'ImgBxColl')"></span>
                                              <span id="gris" onclick="changeImage('coll', '../doc/poubelle/intérieur/collecteur/collecter-200-gris.png', 'ImgBxColl')"></span>
                                         </div>
-                                        <a href="#">Acheter 200€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 200€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsCol" onclick="moins('quantCol', 'moinsCol', 'plusCol')">-</button>
+                                                  <input type="text" value="0" readonly id="quantCol">
+                                                  <button id="plusCol" onclick="plus('quantCol', 'CollStock', 'moinsCol', 'plusCol')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sColl" onclick="affStock('CollStock')">Stock 
+                                                  <div class="allStock" id="CollStock">241</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -364,7 +503,19 @@
                                              <span id="vert" onclick="changeImage('coog', '../doc/poubelle/extérieur/coogee/coogee-350-vert-rouge.png', 'ImgBxCoog')"></span>
                                              <span id="bleu" onclick="changeImage('coog', '../doc/poubelle/extérieur/coogee/coogee-350-bleu-jaune.png', 'ImgBxCoog')"></span>
                                         </div>
-                                        <a href="#">Acheter 350€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 350€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsCog" onclick="moins('quantCog', 'moinsCog', 'plusCog')">-</button>
+                                                  <input type="text" value="0" readonly id="quantCog">
+                                                  <button id="plusCog" onclick="plus('quantCog', 'CoogStock', 'moinsCog', 'plusCol')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sCoog" onclick="affStock('CoogStock')">Stock 
+                                                  <div class="allStock" id="CoogStock">75</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -383,7 +534,19 @@
                                              <span id="bleu" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-bleu.png', 'ImgBxHank')"></span>
                                              <span id="gris" onclick="changeImage('hank', '../doc/poubelle/extérieur/Hanko/Hanko-1250-gris.png', 'ImgBxHank')"></span>
                                         </div>
-                                        <a href="#">Acheter 1250€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 1250€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsHan" onclick="moins('quantHan', 'moinsHan', 'plusHan')">-</button>
+                                                  <input type="text" value="0" readonly id="quantHan">
+                                                  <button id="plusHan" onclick="plus('quantHan', 'HankStock', 'moinsHan', 'plusHan')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sHank" onclick="affStock('WoodHank')">Stock 
+                                                  <div class="allStock" id="WoodHank">41</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -400,7 +563,19 @@
                                              <span id="bleu" onclick="changeImage('ross', '../doc/poubelle/extérieur/rossignol/rossignol-337-bleu.png', 'ImgBxRoss')"></span>
                                              <span id="gris" onclick="changeImage('ross', '../doc/poubelle/extérieur/rossignol/rossignol-337-gris.png', 'ImgBxRoss')"></span>
                                         </div>
-                                        <a href="#">Acheter 337€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 337€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsRos" onclick="moins('quantRos', 'moinsRos', 'plusRos')">-</button>
+                                                  <input type="text" value="0" readonly id="quantRos">
+                                                  <button id="plusRos" onclick="plus('quantRos', 'RossStock', 'moinsRos', 'plusRos')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sRoss" onclick="affStock('RossStock')">Stock 
+                                                  <div class="allStock" id="RossStock">267</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -417,7 +592,19 @@
                                              <span id="vert" onclick="changeImage('tuli', '../doc/poubelle/extérieur/tulipe/tulipe-215-vert.png', 'ImgBxTuli')"></span>
                                              <span id="noir" onclick="changeImage('tuli', '../doc/poubelle/extérieur/tulipe/tulipe-215-noir.png', 'ImgBxTuli')"></span>
                                         </div>
-                                        <a href="#">Acheter 215€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 215€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsTul" onclick="moins('quantTul', 'moinsTul', 'plusTul')">-</button>
+                                                  <input type="text" value="0" readonly id="quantTul">
+                                                  <button id="plusTul" onclick="plus('quantTul', 'TuliStock', 'moinsTul', 'plusCol')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sTuli" onclick="affStock('TuliStock')">Stock 
+                                                  <div class="allStock" id="TuliStock">78</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -438,7 +625,19 @@
                                              <span id="vert" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-vert.png', 'ImgBxCont')"></span>
                                              <span id="rouge" onclick="changeImage('cont', '../doc/poubelle/extérieur/conteneur/conteneur-180-rouge.png', 'ImgBxCont')"></span>
                                         </div>
-                                        <a href="#">Acheter 180€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 180€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsCon" onclick="moins('quantCon', 'moinsCon', 'plusCon')">-</button>
+                                                  <input type="text" value="0" readonly id="quantCon">
+                                                  <button id="plusCon" onclick="plus('quantCon', 'ContStock', 'moinsCon', 'plusCon')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sCont" onclick="affStock('ContStock')">Stock 
+                                                  <div class="allStock" id="ContStock">468</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -454,7 +653,19 @@
                                              <h3>Couleur</h3>
                                              <span id="bleu"></span>
                                         </div>
-                                        <a href="#">Acheter 310€</a>
+                                        <div class="commande">
+                                             <a href="#">Acheter 310€</a>
+                                             <div class="quantite">
+                                                  <button id="moinsGco" onclick="moins('quantGco', 'moinsGco', 'plusGco')">-</button>
+                                                  <input type="text" value="0" readonly id="quantGco">
+                                                  <button id="plusGco" onclick="plus('quantGco', 'GContStock', 'moinsGco', 'plusGco')">+</button>
+                                             </div>
+                                        </div>
+                                        <div class="stock">
+                                             <button type="button" id="sGCont" onclick="affStock('GContStock')">Stock 
+                                                  <div class="allStock" id="GContStock">55</div>
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
