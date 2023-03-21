@@ -65,14 +65,20 @@
                <label for="dateNaissance">Date de naissance</label>
                <input type="date" name="dateNaissance">
                <label for="genre">Genre</label>
-               <div class="genre">
-                    <input type="radio" id="homme" name="genre" value="Homme">
-                    <label for="homme">Homme</label>
-                    <input type="radio" id="femme" name="genre" value="Femme">
-                    <label for="femme">Femme</label>
-                    <input type="radio" id="nh90" name="genre" value="NH90">
-                    <label for="nh90">Hélicoptère NH90 bi-turbine</label>
-               </div>
+               <ul class="genre">
+                    <li>
+                         <input type="radio" id="homme" name="genre" value="Homme">
+                         <label for="homme">Homme</label>
+                    </li>
+                    <li>
+                         <input type="radio" id="femme" name="genre" value="Femme">
+                         <label for="femme">Femme</label>
+                    </li>
+                    <li>
+                         <input type="radio" id="nh90" name="genre" value="NH90">
+                         <label for="nh90">Hélicoptère NH90 bi-turbine</label>
+                    </li>
+               </ul>
                <label for="email">Email</label>
                <input type="email" id="email" placeholder="Votre email...">
                <div class="verif" id="emailexe"></div>

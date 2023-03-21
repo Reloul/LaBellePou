@@ -18,7 +18,7 @@ function VerifEmail() {
 }
 function VerifPrenom() {
     let prenom = document.getElementById("prenom").value;
-    if (prenom.match(/^[a-zA-Z]+$/) == null) {
+    if (prenom.match(/^[a-zA-Z-]+$/) == null) {
         document.getElementById("prenom").style.backgroundColor = "#ff6e6b";
         document.getElementById("prenomverif").innerHTML = "⚠️ Veuillez entrer un prénom valide ⚠️";
     } else {
@@ -29,11 +29,15 @@ function VerifPrenom() {
 
 function VerifNom() {
     let nom = document.getElementById("nom").value;
-    if (nom.match(/^[a-zA-Z]+$/) == null) {
+    if (nom.match(/^[a-zA-Z-]+$/) == null) {
         document.getElementById("nom").style.backgroundColor = "#ff6e6b";
         document.getElementById("nomverif").innerHTML = "⚠️ Veuillez entrer un nom valide ⚠️";
     } else {
         document.getElementById("nom").style.backgroundColor = "white";
         document.getElementById("nomverif").innerHTML = "";
     }
+}
+
+function VerifDate(){
+    
 }

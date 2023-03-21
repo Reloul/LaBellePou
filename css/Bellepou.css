@@ -53,7 +53,6 @@ body{
     width: 0px;
     visibility: hidden;
     border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
     box-sizing: initial;
     border-left: 5px solid #A8DADC;
     background: #A8DADC;
@@ -185,7 +184,6 @@ body{
     left: 0;
     height: 50px;
     background: #F1FAEE;
-    border-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     cursor: pointer;
@@ -290,7 +288,7 @@ footer{
     color: #F1FAEE;
 }
 
-@media screen and (max-width: 11768px) {
+@media screen and (max-width: 768px) {
     .toggle{
         width: 75px;
         height: 75px;
