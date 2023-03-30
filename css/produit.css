@@ -3,7 +3,7 @@ html{
 }
 .corps{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: 9%;
+    margin-left: 5%;
 }
 
 #catPhrase{
@@ -108,11 +108,12 @@ img{
     display: block;
     padding: 10px;
     width: 100%;
+    margin-right: 5%;
 }
 
 .container .card{
     position: relative;
-    width: 75%;
+    width: 18em;
     height: 30em;
     background: #457B9D;
     border-radius: 20px;
@@ -289,6 +290,7 @@ img{
 }
 
 .bandeauT{
+    min-width: 88em;
     background-color:#E63946;
     margin-bottom: 50px;
     text-transform: uppercase;
@@ -299,6 +301,7 @@ img{
     background-color: #DCDBE0;
     padding-top: 30px;
     padding-bottom: 30px;
+    min-width: 88em;
 }
 
 .bandeauP{
@@ -306,11 +309,9 @@ img{
     margin-bottom: 5%;
     text-transform: uppercase;
     height: 5%;
+    min-width: 88em;
 }
 
-.bandeauP .titre{
-    font-size: 80%;
-}
 #scroll_to_top {
     position: fixed;
     width: 50px;

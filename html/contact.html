@@ -55,7 +55,8 @@
             <br>
             <form>
                <label for="dateContact">Date de contact</label>
-               <input type="date" name="dateContact">
+               <input type="date" name="dateContact" id="dateC">
+               <div class="verif" id="dateverif"></div>
                <label for="prenom">Prénom</label>
                <input type="text" id="prenom" placeholder="Votre prénom...">
                <div class="verif" id="prenomverif"></div>
@@ -63,7 +64,8 @@
                <input type="text" id="nom" placeholder="Votre nom...">
                <div class="verif" id="nomverif"></div>
                <label for="dateNaissance">Date de naissance</label>
-               <input type="date" name="dateNaissance">
+               <input type="date" name="dateNaissance" id="dateN">
+               <div class="verif" id="verifnaiss"></div>
                <label for="genre">Genre</label>
                <ul class="genre">
                     <li>
@@ -88,8 +90,16 @@
                     <option value="etudiant">Etudiant</option>
                     <option value="empereur">Empereur de l'empire du Japon</option>
                </select>
+               <label for="sujet">Sujet</label>
+               <select name="sujet" id="sujet">
+                    <option value="site">Problème sur le site</option>
+                    <option value="livraison">Problème de livraison</option>
+                    <option value="achat">Soucis d'achat</option>
+                    <option value="autre">Autre</option>
+               </select>
                <label for="message">Message</label>
-               <textarea name="message" placeholder="Votre message..."></textarea>
+               <textarea name="message" placeholder="Votre message..." id="mess"></textarea>
+               <div class="verif" id="messverif"></div>
                <input type="submit" value="Envoyer" id="submit">
             </form>
           </div>
