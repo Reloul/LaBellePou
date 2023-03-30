@@ -84,7 +84,7 @@ function VerifDateNaiss(){
     let date = document.getElementById("dateN").value;
     let dateJour = new Date().toLocaleDateString();
     dateJour = formatDate(dateJour);
-    if(date === dateJour || date === ""){
+    if(date === dateJour || date === "" || date > dateJour){
         document.getElementById("dateN").style.backgroundColor = "#ff6e6b";
         document.getElementById("verifnaiss").innerHTML = "⚠️ Veuillez rentrez votre date de naissance ⚠️";
     }else{
