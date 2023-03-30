@@ -287,23 +287,3 @@ footer{
     margin-left: 80px;
     color: #F1FAEE;
 }
-
-@media screen and (max-width: 768px) {
-    .toggle{
-        width: 75px;
-        height: 75px;
-    }
-
-
-    .menu ul li a{
-        align-items: center;
-        padding: 20px;
-        font-size: 20px;
-    }
-
-    .menu ul li a .icon{
-        font-size: 20px;
-    }
-
-
-}

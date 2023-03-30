@@ -339,6 +339,7 @@ img{
     background-color: white;
     border-radius: 50%;
     text-align: center;
+    z-index: 999;
     
 }
 
