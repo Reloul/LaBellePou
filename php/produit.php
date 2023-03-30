@@ -8,6 +8,8 @@
         <link rel="stylesheet" type="text/css" href="../css/Bellepou.css">
     </head>
     <body>
+          <?php include 'header.php'; ?>
+          <?php include 'menu.php'; ?>
           <div class="bandeauPres">
                <h2 id="catTitre">CATÉGORIES</h2>
                <p id="catPhrase">Besoin d'une poubelle? Choisissez la catégorie qui vous intéresse :</p>
@@ -640,6 +642,9 @@
                    <img src="../doc/fleche.png" alt="">
                </a>
           </div>
+
+          <?php include("footer.php"); ?>
+
           <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
           <script type="text/javascript" src="../js/index.js"></script>
           <script type="text/javascript" src="../js/produit.js"></script>

@@ -8,40 +8,8 @@
         <link rel="stylesheet" type="text/css" href="../css/Bellepou.css">
     </head>
     <body>
-          <header class="haut">
-               <h1 id="titre">La Bellepou</h1>
-          </header>
-
-          <div>
-          <nav class="menu">
-               <ul>
-                    <li class="list">
-                         <b></b>
-                         <b></b>
-                         <a href="../index.html">
-                              <span class="icon"><ion-icon name="home"></ion-icon></span>
-                              <span class="title">Accueil</span>
-                         </a>
-                    </li>
-                    <li class="list">
-                         <b></b>
-                         <b></b>
-                         <a href="../html/produit.html">
-                              <span class="icon"><ion-icon name="cart"></ion-icon></span>
-                              <span class="title">Produits</span>
-                         </a>
-                    </li>
-                    <li class="list active">
-                         <b></b>
-                         <b></b>
-                         <a href="../html/contact.html">
-                              <span class="icon"><ion-icon name="call"></ion-icon></span>
-                              <span class="title">Contact</span>
-                         </a>
-                    </li>
-               </ul>
-          </nav>
-          </div>
+          <?php include 'header.php'; ?>
+          <?php include 'menu.php'; ?>
           <div class="form">
             <h2>Contactez-nous !</h2>
             <br>
@@ -95,10 +63,8 @@
                <input type="submit" value="Envoyer" id="submit">
             </form>
           </div>
-          <footer class="footer">
-               <p>Copyright La Bellepou</p>
-               <p>WebMaster CY Tech</p>
-          </footer>
+          
+          <?php include 'footer.php'; ?>
 
           <div class="toggle">
                <ion-icon name="menu" class="open"></ion-icon>
@@ -107,25 +73,6 @@
 
           <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
           <script src="../js/contact.js"></script>
-
-          <script>
-               let toggle = document.querySelector('.toggle');
-               let menu = document.querySelector('.menu');
-               toggle.onclick = function(){
-                    toggle.classList.toggle('active')
-                    menu.classList.toggle('active')
-               }
-
-               let list = document.querySelectorAll('.list');
-               for (let i = 0; i < list.length; i++) {
-                    list[i].addEventListener('click', function() {
-                         let j = 0;
-                         while (j < list.length) {
-                              list[j++].className = 'list';
-                         }
-                         list[i].className = 'list active';
-                    });
-               }
-          </script>
+          <script src="../js/index.js"></script>
     </body>
 </htlm>

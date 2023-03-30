@@ -11,40 +11,37 @@
         <link rel="stylesheet" type="text/css" href="css/Bellepou.css">
     </head>
     <body>
-          <header class="haut">
-               <h1 id="titre">La Bellepou</h1>
-          </header>
-
+          <?php include 'php/header.php'; ?>
           <div>
-               <nav class="menu">
-                    <ul>
-                         <li class="list active">
-                              <b></b>
-                              <b></b>
-                              <a href="index.html">
-                                   <span class="icon"><ion-icon name="home"></ion-icon></span>
-                                   <span class="title">Accueil</span>
-                              </a>
-                         </li>
-                         <li class="list">
-                              <b></b>
-                              <b></b>
-                              <a href="html/produit.html">
-                                   <span class="icon"><ion-icon name="cart"></ion-icon></span>
-                                   <span class="title">Produits</span>
-                              </a>
-                         </li>
-                         <li class="list">
-                              <b></b>
-                              <b></b>
-                              <a href="html/contact.html">
-                                   <span class="icon"><ion-icon name="call"></ion-icon></span>
-                                   <span class="title">Contact</span>
-                              </a>
-                         </li>
-                    </ul>
-               </nav>
-          </div>
+        <nav class="menu">
+            <ul>
+                    <li class="list active">
+                        <b></b>
+                        <b></b>
+                        <a href="./index.php">
+                            <span class="icon"><ion-icon name="home"></ion-icon></span>
+                            <span class="title">Accueil</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <b></b>
+                        <b></b>
+                        <a href="./php/produit.php">
+                            <span class="icon"><ion-icon name="cart"></ion-icon></span>
+                            <span class="title">Produits</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <b></b>
+                        <b></b>
+                        <a href="./php/contact.php">
+                            <span class="icon"><ion-icon name="call"></ion-icon></span>
+                            <span class="title">Contact</span>
+                        </a>
+                    </li>
+            </ul>
+        </nav>
+    </div>
           <div class="accueil">
                <div class="corps"> 
                     <div class="vid">
@@ -62,10 +59,8 @@
                     <a id="boutonA" href="html/produit.html">Découvrez Nos Produits</a>
                </div>
           </div>
-          <footer class="footer">
-               <p>Copyright La Bellepou</p>
-               <p>WebMaster CY Tech</p>
-          </footer>
+          
+          <?php include 'php/footer.php'; ?>
 
           <div class="toggle">
                <ion-icon name="menu" class="open"></ion-icon>
