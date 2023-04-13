@@ -1,0 +1,149 @@
+{
+    "corbeille" : [
+        {
+            "nom" : "Dunkelgruen",
+            "prix" : "35",
+            "quantite" : "192",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png",
+                    "2" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-rouge.png",
+                    "3" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-blanc.png",
+                    "4" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-beige.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Woodrow",
+            "prix" : "44.50",
+            "quantite" : "347",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-gris.png",
+                    "2" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-verte.png",
+                    "3" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-blanche.png",
+                    "4" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-beige.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Mateo",
+            "prix" : "19.25",
+            "quantite" : "415",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/corbeille/mateo/mateo-19,25.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Velpabin",
+            "prix" : "54.90",
+            "quantite" : "175",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/corbeille/velpabin/velpabin-54_90.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Metal",
+            "prix" : "55",
+            "quantite" : "58",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/corbeille/metalA/metalA-55.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Exacompta",
+            "prix" : "7.90",
+            "quantite" : "854",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png",
+                    "2" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-noir.png'",
+                    "3" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-rouge.png",
+                    "4" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-vert.png"
+                }
+            ]
+        }
+    ],
+    "intérieur" : [
+        {
+            "nom" : "Andromeda",
+            "prix" : "750",
+            "quantite" : "124",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/intérieur/andromeda/andromeda-750-vert-bleu.png",
+                    "2" : "../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-bleu.png",
+                    "3" : "../doc/poubelle/intérieur/andromeda/andromeda-750-blanc-bleu.png",
+                    "4" : "../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-blanc.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Ark",
+            "prix" : "2",
+            "quantite" : "541",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/intérieur/ark/ark-1-blanc.png",
+                    "2" : "../doc/poubelle/intérieur/ark/ark-1-gris.png",
+                    "3" : "../doc/poubelle/intérieur/ark/ark-1-rose.png",
+                    "4" : "../doc/poubelle/intérieur/ark/ark-1-vert.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Atmosphera",
+            "prix" : "60",
+            "quantite" : "687",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png",
+                    "2" : "../doc/poubelle/intérieur/atmosphera/atmosphera-60-blanche.png",
+                    "3" : "../doc/poubelle/intérieur/atmosphera/atmosphera-60-rouge.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Push",
+            "prix" : "120",
+            "quantite" : "743",
+            "couleur" : [
+                {
+                    "1" : "../doc/poubelle/intérieur/push/push-120-gris.png",
+                    "2" : "../doc/poubelle/intérieur/push/push-120-rose.png",
+                    "3" : "../doc/poubelle/intérieur/push/push-120-bleu.png",
+                    "4" : "../doc/poubelle/intérieur/push/push-120-rouge.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Metal",
+            "prix" : "55",
+            "quantite" : "58",
+            "couleur" : [
+                {
+                    "gris" : "../doc/poubelle/corbeille/metalA/metalA-55.png"
+                }
+            ]
+        },
+        {
+            "nom" : "Exacompta",
+            "prix" : "7.90",
+            "quantite" : "854",
+            "couleur" : [
+                {
+                    "bleu" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png",
+                    "noir" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-noir.png'",
+                    "rouge" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-rouge.png",
+                    "vert" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-vert.png"
+                }
+            ]
+        }
+    ]
+}
