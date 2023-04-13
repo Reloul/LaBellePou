@@ -275,7 +275,8 @@ img{
 #rose{
     background-color: #FF68D1;
 }
-.container .card .contentBx a{
+
+.container .card .contentBx #achat{
     display: inline-block;
     padding: 10px 20px;
     background: #F1FAEE;
@@ -287,13 +288,16 @@ img{
     opacity: 0;
     transform: translate(50px);
     transition: 0.5s;
+    border-style: none;
 }
 
-.container .card:hover .contentBx a{
+.container .card:hover .contentBx #achat{
     opacity: 1;
     transform: translate(0px);
     transition-delay: 0.75s;
+    cursor: pointer;
 }
+
 
 .pageProduit{
     width: 99%;
