@@ -1,0 +1,43 @@
+.seconnecter{
+    margin: 15% auto;
+    background-color: #E63946;
+    color : #F1FAEE;
+    padding: 12px 20px;
+    border-radius: 20px;
+    width: 60%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, select{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type=radio]{
+    width: 40px;
+}
+
+.genre{
+    list-style-type: none;
+}
+
+.verif{
+    white-space: break-spaces;
+    padding-bottom: 5px;
+}
+
+input[type=submit]{
+    background-color: #00822B;
+    color: #F1FAEE;
+}

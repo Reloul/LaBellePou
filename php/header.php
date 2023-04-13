@@ -8,7 +8,13 @@
 </head>
 <body>
     <header class="haut">
-        <h1 id="titre">La Bellepou</h1>
+        <div class="name">
+            <h1 id="titre">La Bellepou</h1>
+        </div>
+        <div class="compte">
+            <a href="./inscription.php" class="inscription">Inscription</a>
+            <a href="./connexion.php" class="connexion">Connexion</a>
+        </div>
     </header>
 </body>
 </html>

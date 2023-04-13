@@ -19,7 +19,6 @@
 header {
     background-color: #E63946;
     width: 100%;
-    display: inline-block;
     height: 80px;
     position: relative;
     top: 0;
@@ -286,4 +285,39 @@ footer{
     padding: 20px;
     margin-left: 80px;
     color: #F1FAEE;
+}
+
+.name{
+    width: 33%;
+    margin-left: 33%;
+
+}
+
+.haut{
+    text-align: center;
+}
+
+.haut div{
+    display: inline-block;
+}
+
+.compte{
+    width: 33%;
+}
+
+.compte a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.inscription{
+    border: solid 2px #A8DADC;
+    color: #A8DADC;
+}
+
+.connexion{
+    border: solid 2px #A8DADC;
+    background-color: #A8DADC;
+    color: #E63946;
 }

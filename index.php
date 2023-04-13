@@ -11,7 +11,15 @@
         <link rel="stylesheet" type="text/css" href="css/Bellepou.css">
     </head>
     <body>
-          <?php include 'php/header.php'; ?>
+          <header class="haut">
+               <div class="name">
+                    <h1 id="titre">La Bellepou</h1>
+               </div>
+               <div class="compte">
+                    <a href="php/inscription.php" class="inscription">Inscription</a>
+                    <a href="php/connexion.php" class="connexion">Connexion</a>
+               </div>
+          </header>
           <div>
         <nav class="menu">
             <ul>
