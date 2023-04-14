@@ -4,12 +4,39 @@
             "nom" : "Dunkelgruen",
             "prix" : "35",
             "quantite" : "192",
+            "idImg" : "dunkel",
+            "idBckG" : "imgBxDunkel",
+            "idQuant" : "quantDunkel",
+            "idPlus" : "plusDunk",
+            "idMoins" : "moinsDunk",
+            "idBStock" : "sDunk",
+            "idStock" : "DunkStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png",
-                    "2" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-rouge.png",
-                    "3" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-blanc.png",
-                    "4" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-beige.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-bleu.png",
+                            "idC" : "bleu"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-rouge.png",
+                            "idC" : "rouge"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-blanc.png",
+                            "idC" : "blanc"
+                        }
+                    ],
+                    "d" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/dunkelgruen/dunkelgruen-35-beige.png",
+                            "idC" : "beige"
+                        }
+                    ]
                 }
             ]
         },
@@ -17,12 +44,39 @@
             "nom" : "Woodrow",
             "prix" : "44.50",
             "quantite" : "347",
+            "idImg" : "wood",
+            "idBckG" : "imgBxWood",
+            "idQuant" : "quantWood",
+            "idPlus" : "plusWood",
+            "idMoins" : "moinsWood",
+            "idBStock" : "sWood",
+            "idStock" : "WoodStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-gris.png",
-                    "2" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-verte.png",
-                    "3" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-blanche.png",
-                    "4" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-beige.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-blanche.png",
+                            "idC" : "blanc"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-beige.png",
+                            "idC" : "beige"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-verte.png",
+                            "idC" : "vert"
+                        }
+                    ],
+                    "d" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/wooddrow/wooddrow-44,50-gris.png",
+                            "idC" : "noir"
+                        }
+                    ]
                 }
             ]
         },
@@ -30,9 +84,21 @@
             "nom" : "Mateo",
             "prix" : "19.25",
             "quantite" : "415",
+            "idImg" : "mateo",
+            "idBckG" : "imgBxMateo",
+            "idQuant" : "quantMat",
+            "idPlus" : "plusMat",
+            "idMoins" : "moinsMat",
+            "idBStock" : "sMateo",
+            "idStock" : "MateoStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/corbeille/mateo/mateo-19,25.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/mateo/mateo-19,25.png",
+                            "idC" : "bleu"
+                        }
+                    ]
                 }
             ]
         },
@@ -40,9 +106,21 @@
             "nom" : "Velpabin",
             "prix" : "54.90",
             "quantite" : "175",
+            "idImg" : "velpabin",
+            "idBckG" : "imgBxVelp",
+            "idQuant" : "quantVelp",
+            "idPlus" : "plusVelp",
+            "idMoins" : "moinsVelp",
+            "idBStock" : "sVelp",
+            "idStock" : "VelpStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/corbeille/velpabin/velpabin-54_90.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/velpabin/velpabin-54_90.png",
+                            "idC" : "noir"
+                        }
+                    ]
                 }
             ]
         },
@@ -50,9 +128,21 @@
             "nom" : "Metal",
             "prix" : "55",
             "quantite" : "58",
+            "idImg" : "metal",
+            "idBckG" : "imgBxMet",
+            "idQuant" : "quantMet",
+            "idPlus" : "plusMet",
+            "idMoins" : "moinsMet",
+            "idBStock" : "sMetal",
+            "idStock" : "MetalStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/corbeille/metalA/metalA-55.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/metalA/metalA-55.png",
+                            "idC" : "gris"
+                        }
+                    ]
                 }
             ]
         },
@@ -60,12 +150,39 @@
             "nom" : "Exacompta",
             "prix" : "7.90",
             "quantite" : "854",
+            "idImg" : "exa",
+            "idBckG" : "imgBxExa",
+            "idQuant" : "quantExa",
+            "idPlus" : "plusExa",
+            "idMoins" : "moinsExa",
+            "idBStock" : "sExa",
+            "idStock" : "ExaStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png",
-                    "2" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-noir.png'",
-                    "3" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-rouge.png",
-                    "4" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-vert.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png",
+                            "idC" : "bleu"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-noir.png",
+                            "idC" : "noir"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-rouge.png",
+                            "idC" : "rouge"
+                        }
+                    ],
+                    "d" :[
+                        {
+                            "src" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-vert.png",
+                            "idC" : "vert"
+                        }
+                    ]
                 }
             ]
         }
@@ -75,12 +192,39 @@
             "nom" : "Andromeda",
             "prix" : "750",
             "quantite" : "124",
+            "idImg" : "andro",
+            "idBckG" : "imgBxAndro",
+            "idQuant" : "quantAnd",
+            "idPlus" : "plusAnd",
+            "idMoins" : "moinsAnd",
+            "idBStock" : "sAndro",
+            "idStock" : "AndroStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/intérieur/andromeda/andromeda-750-vert-bleu.png",
-                    "2" : "../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-bleu.png",
-                    "3" : "../doc/poubelle/intérieur/andromeda/andromeda-750-blanc-bleu.png",
-                    "4" : "../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-blanc.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/andromeda/andromeda-750-vert-bleu.png",
+                            "idC" : "vert"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/andromeda/andromeda-750-blanc-bleu.png",
+                            "idC" : "blanc"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-blanc.png",
+                            "idC" : "jaune"
+                        }
+                    ],
+                    "d" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/andromeda/andromeda-750-jaune-bleu.png",
+                            "idC" : "bleu"
+                        }
+                    ]
                 }
             ]
         },
@@ -88,12 +232,39 @@
             "nom" : "Ark",
             "prix" : "2",
             "quantite" : "541",
+            "idImg" : "ark",
+            "idBckG" : "imgBxArk",
+            "idQuant" : "quantArk",
+            "idPlus" : "plusArk",
+            "idMoins" : "moinsArk",
+            "idBStock" : "sArk",
+            "idStock" : "ArkStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/intérieur/ark/ark-1-blanc.png",
-                    "2" : "../doc/poubelle/intérieur/ark/ark-1-gris.png",
-                    "3" : "../doc/poubelle/intérieur/ark/ark-1-rose.png",
-                    "4" : "../doc/poubelle/intérieur/ark/ark-1-vert.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/ark/ark-1-blanc.png",
+                            "idC" : "blanc"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/ark/ark-1-gris.png",
+                            "idC" : "noir"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/ark/ark-1-rose.png",
+                            "idC" : "rose"
+                        }
+                    ],
+                    "d" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/ark/ark-1-vert.png",
+                            "idC" : "vert"
+                        }
+                    ]
                 }
             ]
         },
@@ -101,11 +272,33 @@
             "nom" : "Atmosphera",
             "prix" : "60",
             "quantite" : "687",
+            "idImg" : "atmo",
+            "idBckG" : "imgBxAtmo",
+            "idQuant" : "quantAtm",
+            "idPlus" : "plusAtm",
+            "idMoins" : "moinsAtm",
+            "idBStock" : "sAtmo",
+            "idStock" : "AtmoStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png",
-                    "2" : "../doc/poubelle/intérieur/atmosphera/atmosphera-60-blanche.png",
-                    "3" : "../doc/poubelle/intérieur/atmosphera/atmosphera-60-rouge.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/atmosphera/atmosphera-60-noir.png",
+                            "idC" : "noir"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/atmosphera/atmosphera-60-blanche.png",
+                            "idC" : "blanc"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/atmosphera/atmosphera-60-rouge.png",
+                            "idC" : "rouge"
+                        }
+                    ]
                 }
             ]
         },
@@ -113,35 +306,295 @@
             "nom" : "Push",
             "prix" : "120",
             "quantite" : "743",
+            "idImg" : "push",
+            "idBckG" : "imgBxPush",
+            "idQuant" : "quantPus",
+            "idPlus" : "plusPus",
+            "idMoins" : "moinsPus",
+            "idBStock" : "sPush",
+            "idStock" : "PushStock",
             "couleur" : [
                 {
-                    "1" : "../doc/poubelle/intérieur/push/push-120-gris.png",
-                    "2" : "../doc/poubelle/intérieur/push/push-120-rose.png",
-                    "3" : "../doc/poubelle/intérieur/push/push-120-bleu.png",
-                    "4" : "../doc/poubelle/intérieur/push/push-120-rouge.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/push/push-120-gris.png",
+                            "idC" : "gris"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/push/push-120-rose.png",
+                            "idC" : "rose"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/push/push-120-bleu.png",
+                            "idC" : "bleu"
+                        }
+                    ],
+                    "d" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/push/push-120-rouge.png",
+                            "idC" : "rouge"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "nom" : "Metal",
-            "prix" : "55",
-            "quantite" : "58",
+            "nom" : "Decor",
+            "prix" : "230",
+            "quantite" : "419",
+            "idImg" : "deco",
+            "idBckG" : "imgBxDeco",
+            "idQuant" : "quantDec",
+            "idPlus" : "plusDec",
+            "idMoins" : "moinsDec",
+            "idBStock" : "sDeco",
+            "idStock" : "DecoStock",
             "couleur" : [
                 {
-                    "gris" : "../doc/poubelle/corbeille/metalA/metalA-55.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/decor/decor-230-argent.jpg",
+                            "idC" : "gris"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "nom" : "Exacompta",
-            "prix" : "7.90",
-            "quantite" : "854",
+            "nom" : "Collecteur",
+            "prix" : "200",
+            "quantite" : "241",
+            "idImg" : "coll",
+            "idBckG" : "imgBxColl",
+            "idQuant" : "quantCol",
+            "idPlus" : "plusCol",
+            "idMoins" : "moinsCol",
+            "idBStock" : "sColl",
+            "idStock" : "CollStock",
             "couleur" : [
                 {
-                    "bleu" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-bleu.png",
-                    "noir" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-noir.png'",
-                    "rouge" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-rouge.png",
-                    "vert" : "../doc/poubelle/corbeille/exacompta/exacompta-7,90-vert.png"
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/collecteur/collecter-200-vert.png",
+                            "idC" : "vert"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/collecteur/collecter-200-jaune.png",
+                            "idC" : "jaune"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/collecteur/collecter-200-bleu.png",
+                            "idC" : "bleu"
+                        }
+                    ],
+                    "d" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/collecteur/collecter-200-rouge.png",
+                            "idC" : "rouge"
+                        }
+                    ],
+                    "e" :[
+                        {
+                            "src" : "../doc/poubelle/intérieur/collecteur/collecter-200-gris.png",
+                            "idC" : "gris"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "extérieur" : [
+        {
+            "nom" : "Coogee",
+            "prix" : "350",
+            "quantite" : "75",
+            "idImg" : "coog",
+            "idBckG" : "imgBxCoog",
+            "idQuant" : "quantCog",
+            "idPlus" : "plusCog",
+            "idMoins" : "moinsCog",
+            "idBStock" : "sCoog",
+            "idStock" : "CoogStock",
+            "couleur" : [
+                {
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/coogee/coogee-350-vert-rouge.png",
+                            "idC" : "vert"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/coogee/coogee-350-bleu-jaune.png",
+                            "idC" : "bleu"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom" : "Hanko",
+            "prix" : "1250",
+            "quantite" : "41",
+            "idImg" : "hank",
+            "idBckG" : "imgBxHank",
+            "idQuant" : "quantHan",
+            "idPlus" : "plusHan",
+            "idMoins" : "moinsHan",
+            "idBStock" : "sHank",
+            "idStock" : "HankStock",
+            "couleur" : [
+                {
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/Hanko/Hanko-1250-jaune.png",
+                            "idC" : "jaune"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/Hanko/Hanko-1250-verte.png",
+                            "idC" : "vert"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/Hanko/Hanko-1250-bleu.png",
+                            "idC" : "bleu"
+                        }
+                    ],
+                    "d" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/Hanko/Hanko-1250-gris.png",
+                            "idC" : "gris"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom" : "Rossignol",
+            "prix" : "337",
+            "quantite" : "267",
+            "idImg" : "ross",
+            "idBckG" : "imgBxRoss",
+            "idQuant" : "quantRos",
+            "idPlus" : "plusRos",
+            "idMoins" : "moinsRos",
+            "idBStock" : "sRoss",
+            "idStock" : "RossStock",
+            "couleur" : [
+                {
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/rossignol/rossignol-337-bleu.png",
+                            "idC" : "bleu"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/rossignol/rossignol-337-gris.png",
+                            "idC" : "gris"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom" : "Tulipe",
+            "prix" : "215",
+            "quantite" : "78",
+            "idImg" : "tuli",
+            "idBckG" : "imgBxTuli",
+            "idQuant" : "quantTul",
+            "idPlus" : "plusTul",
+            "idMoins" : "moinsTul",
+            "idBStock" : "sTuli",
+            "idStock" : "TuliStock",
+            "couleur" : [
+                {
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/tulipe/tulipe-215-vert.png",
+                            "idC" : "vert"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/tulipe/tulipe-215-noir.png",
+                            "idC" : "noir"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom" : "Conteneur",
+            "prix" : "180",
+            "quantite" : "468",
+            "idImg" : "cont",
+            "idBckG" : "imgBxCont",
+            "idQuant" : "quantCon",
+            "idPlus" : "plusCon",
+            "idMoins" : "moinsCon",
+            "idBStock" : "sCont",
+            "idStock" : "ContStock",
+            "couleur" : [
+                {
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/conteneur/conteneur-180-jaune.png",
+                            "idC" : "jaune"
+                        }
+                    ],
+                    "b" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/conteneur/conteneur-180-bleu.png",
+                            "idC" : "bleu"
+                        }
+                    ],
+                    "c" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/conteneur/conteneur-180-vert.png",
+                            "idC" : "vert"
+                        }
+                    ],
+                    "d" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/conteneur/conteneur-180-rouge.png",
+                            "idC" : "rouge"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom" : "GrandConteneur",
+            "prix" : "310",
+            "quantite" : "55",
+            "idImg" : "gCont",
+            "idBckG" : "imgBxGCont",
+            "idQuant" : "quantGco",
+            "idPlus" : "plusGco",
+            "idMoins" : "moinsGco",
+            "idBStock" : "sGCont",
+            "idStock" : "GContStock",
+            "couleur" : [
+                {
+                    "a" :[
+                        {
+                            "src" : "../doc/poubelle/extérieur/Gconteneur/Gconteneur-310-bleu.png",
+                            "idC" : "bleu"
+                        }
+                    ]
                 }
             ]
         }
