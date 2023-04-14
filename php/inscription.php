@@ -1,5 +1,6 @@
 <?php
      session_start();
+     include 'ecrirejson.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -14,41 +15,20 @@
           <?php include 'header.php'; ?>
           <?php include 'menu.php'; ?>
           
+          
+          
           <div class="seconnecter">
             <h2>Créer un compte</h2>
             <br>
-            <form>
-               <label for="prenom">Prénom</label>
-               <input type="text" id="prenom" placeholder="Votre prénom...">
-               <div class="verif" id="prenomverif"></div>
-               <label for="nom">Nom</label>
-               <input type="text" id="nom" placeholder="Votre nom...">
-               <div class="verif" id="nomverif"></div>
-               <label for="dateNaissance">Date de naissance</label>
-               <input type="date" name="dateNaissance" id="dateN">
-               <div class="verif" id="verifnaiss"></div>
-               <label for="genre">Genre</label>
-               <ul class="genre">
-                    <li>
-                         <input type="radio" id="homme" name="genre" value="Homme">
-                         <label for="homme">Homme</label>
-                    </li>
-                    <li>
-                         <input type="radio" id="femme" name="genre" value="Femme">
-                         <label for="femme">Femme</label>
-                    </li>
-                    <li>
-                         <input type="radio" id="nh90" name="genre" value="NH90">
-                         <label for="nh90">Hélicoptère NH90 bi-turbine</label>
-                    </li>
-               </ul>
+            <form method="post" action="">
                <label for="email">Email</label>
-               <input type="email" id="email" placeholder="Votre email...">
-               <div class="verif" id="emailexe"></div>
+               <input type="email" id="email" placeholder="Votre email..." name="email" value="<?php echo $email; ?>">
                <label for="mdp">Mot de passe</label>
-                <input type="password" id="mdp" placeholder="Votre mot de passe...">
-                <div class="verif" id="mdpexe"></div>
-               <input type="submit" value="Se connecter" id="submit">
+               <input type="password" id="mdp" placeholder="Votre mot de passe..." name="password" value="<?php echo $password; ?>">
+               <input type="submit" value="Se connecter" id="submit" name="submit">
+               <?php if (!empty($error)): ?>
+                  <span class="verif" id="error"><?php echo $error; ?></span>
+               <?php endif; ?>
             </form>
           </div>
           

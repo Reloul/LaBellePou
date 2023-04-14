@@ -1,0 +1,12 @@
+{
+    "users": [
+      {
+        "email": "valentin@serres.fr",
+        "password": "gaming"
+      },
+      {
+        "email": "ugo@latry.fr",
+        "password": "paularis"
+      }
+    ]
+  }

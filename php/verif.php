@@ -1,30 +1,35 @@
 <?php
-// Récupération des données du formulaire
-$email = isset($_POST['email']) ? $_POST['email'] : '';
-$password = isset($_POST['password']) ? $_POST['password'] : '';
+session_start();
 
-// Validation des données
-$emailErr = '';
-$passwordErr = '';
-$isValid = true;
+$error = "";
 
-if (empty($email)) {
-    $emailErr = '⚠️ Veuillez saisir votre adresse e-mail. ⚠️';
-    $isValid = false;
-} else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $emailErr = '⚠️ Veuillez saisir une adresse e-mail valide. ⚠️';
-    $isValid = false;
-}
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $error = "";
 
-if (empty($password)) {
-    $passwordErr = '⚠️ Veuillez saisir votre mot de passe. ⚠️';
-    $isValid = false;
-}
-
-// Vérification des informations de connexion
-if ($isValid && $email === 'votre_email@example.com' && $password === 'votre_mot_de_passe') {
-    // Connexion réussie, rediriger vers une page protégée
-    header('Location: page_protegee.php');
-    exit();
+    if (empty($email) || empty($password)) {
+        $error = "Veuillez remplir tous les champs.";
+    } else {
+         $json = file_get_contents('../json/users.json');
+         $users = json_decode($json, true)['users'];
+ 
+         $userFound = false;
+         foreach ($users as $user) {
+             if ($user['email'] == $email && $user['password'] == $password) {
+                 $userFound = true;
+                 break;
+             }
+         }
+ 
+         if ($userFound) {
+             $_SESSION['email'] = $email;
+             $_SESSION['password'] = $password;
+             header('Location: ../index.php');
+             exit;
+         } else {
+             $error = "Email ou mot de passe incorrect";
+         }
+    }
 }
 ?>

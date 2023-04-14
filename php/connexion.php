@@ -21,11 +21,10 @@
             <form method="post" action="">
                <label for="email">Email</label>
                <input type="email" id="email" placeholder="Votre email..." name="email" value="<?php echo $email; ?>">
-               <span class="verif" id="emailexe"><?php echo $emailErr; ?></span>
                <label for="mdp">Mot de passe</label>
-                <input type="password" id="mdp" placeholder="Votre mot de passe..." name="password" value="<?php echo $password; ?>">
-                <span class="verif" id="mdpexe"><?php echo $passwordErr ?></span>
+               <input type="password" id="mdp" placeholder="Votre mot de passe..." name="password" value="<?php echo $password; ?>">
                <input type="submit" value="Se connecter" id="submit" name="submit">
+               <span class="verif" id="error"><?php echo $error; ?></span>
             </form>
           </div>
           
