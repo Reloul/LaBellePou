@@ -10,7 +10,8 @@
     border-right: 5px solid #A8DADC;
     background: #A8DADC;
     transition : 0.5s;
-    overflow-y: hidden;    
+    overflow-y: hidden;
+    box-shadow: -5px 0 0 #F1FAEE;  
     z-index: 10;
 }
 
