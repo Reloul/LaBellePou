@@ -1,5 +1,6 @@
 <?php
      session_start();
+     include 'php/deconnexion.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,15 +12,26 @@
         <link rel="stylesheet" type="text/css" href="css/Bellepou.css">
     </head>
     <body>
-          <header class="haut">
-               <div class="name">
-                    <h1 id="titre">La Bellepou</h1>
-               </div>
-               <div class="compte">
-                    <a href="php/inscription.php" class="inscription">Inscription</a>
-                    <a href="php/connexion.php" class="connexion">Connexion</a>
-               </div>
-          </header>
+    <header class="haut">
+        <div class="name">
+            <h1 id="titre">La Bellepou</h1>
+        </div>
+        <?php if ($isLoggedIn) { ?>
+        <div class="compte">
+            <div class="email"> Bonjour <?php echo $email; ?> !</div>
+            <div>
+                <form method="post" action="">
+                    <input type="submit" name="logout" value="Déconnexion" id="deconnexion" class="deconnexion">
+                </form>
+            </div>
+        </div>
+    <?php } else { ?>
+        <div class="compte">
+            <a href="./php/inscription.php" class="inscription">Inscription</a>
+            <a href="./php/connexion.php" class="connexion">Connexion</a>
+        </div>
+    <?php } ?>
+    </header>
           <div>
         <nav class="menu">
             <ul>

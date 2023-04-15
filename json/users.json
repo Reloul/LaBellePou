@@ -1,12 +1,20 @@
 {
     "users": [
-      {
-        "email": "valentin@serres.fr",
-        "password": "gaming"
-      },
-      {
-        "email": "ugo@latry.fr",
-        "password": "paularis"
-      }
+        {
+            "email": "valentin@serres.fr",
+            "password": "gaming"
+        },
+        {
+            "email": "ugo@latry.fr",
+            "password": "paularis"
+        },
+        {
+            "email": "oui@oui.Fr",
+            "password": "oui"
+        },
+        {
+            "email": "non@non.non",
+            "password": "non"
+        }
     ]
-  }
+}

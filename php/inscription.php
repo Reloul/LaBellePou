@@ -15,8 +15,6 @@
           <?php include 'header.php'; ?>
           <?php include 'menu.php'; ?>
           
-          
-          
           <div class="seconnecter">
             <h2>Créer un compte</h2>
             <br>
@@ -26,9 +24,7 @@
                <label for="mdp">Mot de passe</label>
                <input type="password" id="mdp" placeholder="Votre mot de passe..." name="password" value="<?php echo $password; ?>">
                <input type="submit" value="Se connecter" id="submit" name="submit">
-               <?php if (!empty($error)): ?>
-                  <span class="verif" id="error"><?php echo $error; ?></span>
-               <?php endif; ?>
+               <span class="verif" id="error"><?php echo $error; ?></span>
             </form>
           </div>
           
@@ -40,7 +36,6 @@
           </div>
 
           <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-          <script src="../js/contact.js"></script>
           <script src="../js/index.js"></script>
     </body>
 </htlm>

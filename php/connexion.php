@@ -36,7 +36,6 @@
           </div>
 
           <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-          <!--<script src="../js/contact.js"></script>-->
           <script src="../js/index.js"></script>
     </body>
 </htlm>

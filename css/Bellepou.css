@@ -305,19 +305,25 @@ footer{
     width: 33%;
 }
 
-.compte a{
+.compte a, .compte input{
     text-decoration: none;
     padding: 10px;
     border-radius: 25px;
 }
 
-.inscription{
+.inscription, .compte input{
     border: solid 2px #A8DADC;
     color: #A8DADC;
+    background-color: #E63946;
 }
 
 .connexion{
     border: solid 2px #A8DADC;
     background-color: #A8DADC;
     color: #E63946;
+}
+
+.email{
+    color: #A8DADC;
+    padding: 5px;
 }
