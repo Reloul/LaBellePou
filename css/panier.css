@@ -73,6 +73,7 @@
 .produitV .article{
     display: block;
     margin-top: 10px;
+    text-align: left;
 }
 
 .global{
@@ -83,10 +84,19 @@
     left: 25px;
 }
 
+.global input{
+    display: none;
+}
+
 .produitV .article .spanG{
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-top: 6px;
     margin-left: 10px;
+}
+
+.produitV .article .spanG input{
+    display:none;
 }
 .global button ion-icon{
     height: 20px;
@@ -120,3 +130,16 @@
     margin-left: 30px;
 }
 
+.produitV #sauve{
+    margin-bottom: 10px;
+    background-color: #1D3557;
+    border-style: none;
+    color: #F1FAEE;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.produitV{
+    text-align: center;
+}
