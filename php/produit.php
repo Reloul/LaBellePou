@@ -17,6 +17,7 @@
           <?php include 'panier.php'; 
                include 'varSession.inc.php';
           ?>
+          
           <div class="bandeauPres">
                <h2 id="catTitre">CATÉGORIES</h2>
                <p id="catPhrase">Besoin d'une poubelle? Choisissez la catégorie qui vous intéresse :</p>
@@ -27,7 +28,7 @@
                                    <img id="presCorbeille" src="../doc/poubelle/corbeille/presCorb.png" alt="presentation corbeille" >
                               </div>
                               <div class="boutonProd">
-                                   <a id="boutonProduit" href="#corbeilleP">Corbeilles</a>
+                                   <a id="boutonProduit" href="?categorie=corbeille">Corbeilles</a>
                               </div>
                          </div>
                     </div>
@@ -37,7 +38,7 @@
                                    <img id="presIntérieur" src="../doc/poubelle/intérieur/presInt.png" alt="présentation interieur" >
                               </div>
                               <div class="boutonProd">
-                                   <a id="boutonProduit" href="#intérieurP">Intérieures</a>
+                                   <a id="boutonProduit" href="?categorie=interieur">Intérieures</a>
                               </div>
                          </div>
                     </div>
@@ -47,24 +48,28 @@
                                    <img id="presExtérieur" src="../doc/poubelle/extérieur/presExte.png" alt="présentation extérieur">
                               </div>
                               <div class="boutonProd">
-                                   <a id="boutonProduit" href="#exterieurP">Extérieures</a>
+                                   <a id="boutonProduit" href="?categorie=exterieur">Extérieures</a>
                               </div>
                          </div>
                     </div>
                </div>
           </div>
-          <div class="bandeauP">
-               <hr id="corbeilleP">
-               <div class="titre">
-                    <h2>CORBEILLES</h2>
-               </div>
-               <hr>
-          </div>
-          <div class="pageProduit">
-               <div class="corps"> 
-                    <div class="corbeilleTop">
-                    <?php
-                         $tab = $_SESSION['produit'];
+          <?php
+               if (isset($_GET['categorie'])) {
+                    $categorie = $_GET['categorie'];
+                    $tab = $_SESSION['produit'];
+                    switch ($categorie) {
+                         case 'corbeille':
+                              echo "<div class='bandeauP'>";
+                              echo "<hr id='corbeilleP'>";
+                              echo "<div class='titre'>";
+                              echo "<h2>CORBEILLES</h2>";
+                              echo "</div>";
+                              echo "<hr>";
+                              echo "</div>";
+                              echo "<div class='pageProduit'>";
+                              echo "<div class='corps'> ";
+                              echo "<div class='corbeilleTop'>";
                          $compte = 0;
 
                          foreach($tab['corbeille'] as $produits){
@@ -94,10 +99,8 @@
                                    echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                               }   
                          }
-                    ?>
-                    </div>
-                    <div class="corbeilleBot">
-                    <?php
+                    echo "</div>";
+                    echo "<div class='corbeilleBot'>";
                          $compte = 0;
 
                          foreach($tab['corbeille'] as $produits){
@@ -127,21 +130,21 @@
                                    echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                               }   
                          }
-                    ?>
-                    </div>
-               </div>
-          </div>
-          <div class="bandeauP">
-               <hr id="intérieurP">
-               <div class="titre">
-                    <h2>Intérieur</h2>
-               </div>
-               <hr>
-          </div>
-          <div class="pageProduit">
-               <div class="corps">
-                    <div class="interieurTop">
-                         <?php
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+                              break;
+                         case 'interieur':
+                              echo "<div class='bandeauP'>";
+                              echo "<hr id='intérieurP'>";
+                              echo "<div class='titre'>";
+                              echo "<h2>Intérieur</h2>";
+                              echo "</div>";
+                              echo "<hr>";
+                              echo "</div>";
+                              echo "<div class='pageProduit'>";
+                              echo "<div class='corps'>";
+                              echo "<div class='interieurTop'>";
                               $compte = 0;
 
                               foreach($tab['intérieur'] as $produits){
@@ -171,121 +174,342 @@
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
                               }
-                         ?>
                          
-                    </div>
-                    <div class="interieurBot">
-                         <?php
-                         $compte = 0;
+                              echo "</div>";
+                              echo "<div class='interieurBot'>";
+                              $compte = 0;
 
-                         foreach($tab['intérieur'] as $produits){
-                              $compte = $compte + 1;
-                              if($compte > 4){
-                                   echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
-                                   echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
-                                   echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
-                                   echo "<div class='contentBx'>";
-                                   echo "<h2>".$produits['nom']."</h2>";
-                                   echo "<div class='color'> <h3>Couleur</h3>";
-                                   foreach($produits['couleur'] as $couleur){
-                                        foreach($couleur as $key => $images){
-                                             foreach ($images as $image) {
-                                                  echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                              foreach($tab['intérieur'] as $produits){
+                                   $compte = $compte + 1;
+                                   if($compte > 4){
+                                        echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
+                                        echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
+                                        echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
+                                        echo "<div class='contentBx'>";
+                                        echo "<h2>".$produits['nom']."</h2>";
+                                        echo "<div class='color'> <h3>Couleur</h3>";
+                                        foreach($produits['couleur'] as $couleur){
+                                             foreach($couleur as $key => $images){
+                                                  foreach ($images as $image) {
+                                                       echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                                                  }
                                              }
                                         }
-                                   }
-                                   echo "</div>";
-                                   echo "<div class='commande'>";
-                                   echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
-                                   echo "<div class='quantite'>";
-                                   echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
-                                   echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                   echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
-                                   echo "<div class='stock'>";
-                                   echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
-                              }   
-                         }
-                         ?>
-                    </div>
-               </div>
-          </div>
-          <div class="bandeauP">
-               <hr id="exterieurP">
-               <div class="titre">
-                    <h2>extérieur</h2>
-               </div>
-               <hr>
-          </div>
-          <div class="pageProduit">
-               <div class="corps">
-                    <div class="exterieurTop">
-                         <?php
-                         $compte = 0;
+                                        echo "</div>";
+                                        echo "<div class='commande'>";
+                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<div class='quantite'>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
+                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<div class='stock'>";
+                                        echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
+                                   }   
+                              }
+                              echo "</div>";
+                              echo "</div>";
+                              echo "</div>";
+                              break;
+                         case 'exterieur':
+                              echo "<div class='bandeauP'>";
+                              echo "<hr id='exterieurP'>";
+                              echo "<div class='titre'>";
+                              echo "<h2>extérieur</h2>";
+                              echo "</div>";
+                              echo "<hr>";
+                              echo "</div>";
+                              echo "<div class='pageProduit'>";
+                              echo "<div class='corps'>";
+                              echo "<div class='exterieurTop'>";
+                              $compte = 0;
 
-                         foreach($tab['extérieur'] as $produits){
-                              $compte = $compte + 1;
-                              if($compte < 5){
-                                   echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
-                                   echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
-                                   echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
-                                   echo "<div class='contentBx'>";
-                                   echo "<h2>".$produits['nom']."</h2>";
-                                   echo "<div class='color'> <h3>Couleur</h3>";
-                                   foreach($produits['couleur'] as $couleur){
-                                        foreach($couleur as $key => $images){
-                                             foreach ($images as $image) {
-                                                  echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                              foreach($tab['extérieur'] as $produits){
+                                   $compte = $compte + 1;
+                                   if($compte < 5){
+                                        echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
+                                        echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
+                                        echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
+                                        echo "<div class='contentBx'>";
+                                        echo "<h2>".$produits['nom']."</h2>";
+                                        echo "<div class='color'> <h3>Couleur</h3>";
+                                        foreach($produits['couleur'] as $couleur){
+                                             foreach($couleur as $key => $images){
+                                                  foreach ($images as $image) {
+                                                       echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                                                  }
                                              }
                                         }
-                                   }
-                                   echo "</div>";
-                                   echo "<div class='commande'>";
-                                   echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
-                                   echo "<div class='quantite'>";
-                                   echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
-                                   echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                   echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
-                                   echo "<div class='stock'>";
-                                   echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
-                              }   
-                         }
-                         ?>
-                    </div>
-                    <div class="exterieurBot">
-                         <?php
-                         $compte = 0;
+                                        echo "</div>";
+                                        echo "<div class='commande'>";
+                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<div class='quantite'>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
+                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<div class='stock'>";
+                                        echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
+                                   }   
+                              }
+                              echo "</div>";
+                              echo "<div class='exterieurBot'>";
+                              $compte = 0;
 
-                         foreach($tab['extérieur'] as $produits){
-                              $compte = $compte + 1;
-                              if($compte > 4){
-                                   echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
-                                   echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
-                                   echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
-                                   echo "<div class='contentBx'>";
-                                   echo "<h2>".$produits['nom']."</h2>";
-                                   echo "<div class='color'> <h3>Couleur</h3>";
-                                   foreach($produits['couleur'] as $couleur){
-                                        foreach($couleur as $key => $images){
-                                             foreach ($images as $image) {
-                                                  echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                              foreach($tab['extérieur'] as $produits){
+                                   $compte = $compte + 1;
+                                   if($compte > 4){
+                                        echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
+                                        echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
+                                        echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
+                                        echo "<div class='contentBx'>";
+                                        echo "<h2>".$produits['nom']."</h2>";
+                                        echo "<div class='color'> <h3>Couleur</h3>";
+                                        foreach($produits['couleur'] as $couleur){
+                                             foreach($couleur as $key => $images){
+                                                  foreach ($images as $image) {
+                                                       echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                                                  }
                                              }
                                         }
-                                   }
+                                        echo "</div>";
+                                        echo "<div class='commande'>";
+                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<div class='quantite'>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
+                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<div class='stock'>";
+                                        echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
+                                   }   
+                              }
+                              echo "</div>";
+                              echo "</div>";
+                              echo "</div>";
+                              break;
+                         default:
+                                   echo "<div class='bandeauP'>";
+                                   echo "<hr id='corbeilleP'>";
+                                   echo "<div class='titre'>";
+                                   echo "<h2>CORBEILLES</h2>";
                                    echo "</div>";
-                                   echo "<div class='commande'>";
-                                   echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
-                                   echo "<div class='quantite'>";
-                                   echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
-                                   echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                   echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
-                                   echo "<div class='stock'>";
-                                   echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
-                              }   
-                         }
-                         ?>
-                    </div>
-               </div>
-          </div>
+                                   echo "<hr>";
+                                   echo "</div>";
+                                   echo "<div class='pageProduit'>";
+                                   echo "<div class='corps'> ";
+                                   echo "<div class='corbeilleTop'>";
+                              $compte = 0;
+     
+                              foreach($tab['corbeille'] as $produits){
+                                   $compte = $compte + 1;
+                                   if($compte < 5){
+                                        echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
+                                        echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
+                                        echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
+                                        echo "<div class='contentBx'>";
+                                        echo "<h2>".$produits['nom']."</h2>";
+                                        echo "<div class='color'> <h3>Couleur</h3>";
+                                        foreach($produits['couleur'] as $couleur){
+                                             foreach($couleur as $key => $images){
+                                                  foreach ($images as $image) {
+                                                       echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                                                  }
+                                             }
+                                        }
+                                        echo "</div>";
+                                        echo "<div class='commande'>";
+                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<div class='quantite'>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
+                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<div class='stock'>";
+                                        echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
+                                   }   
+                              }
+                         echo "</div>";
+                         echo "<div class='corbeilleBot'>";
+                              $compte = 0;
+     
+                              foreach($tab['corbeille'] as $produits){
+                                   $compte = $compte + 1;
+                                   if($compte > 4){
+                                        echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
+                                        echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
+                                        echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
+                                        echo "<div class='contentBx'>";
+                                        echo "<h2>".$produits['nom']."</h2>";
+                                        echo "<div class='color'> <h3>Couleur</h3>";
+                                        foreach($produits['couleur'] as $couleur){
+                                             foreach($couleur as $key => $images){
+                                                  foreach ($images as $image) {
+                                                       echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                                                  }
+                                             }
+                                        }
+                                        echo "</div>";
+                                        echo "<div class='commande'>";
+                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<div class='quantite'>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
+                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<div class='stock'>";
+                                        echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
+                                   }   
+                              }
+                         echo "</div>";
+                         echo "</div>";
+                         echo "</div>";
+                         echo "<div class='bandeauP'>";
+                              echo "<hr id='intérieurP'>";
+                              echo "<div class='titre'>";
+                              echo "<h2>Intérieur</h2>";
+                              echo "</div>";
+                              echo "<hr>";
+                              echo "</div>";
+                              echo "<div class='pageProduit'>";
+                              echo "<div class='corps'>";
+                              echo "<div class='interieurTop'>";
+                              $compte = 0;
+
+                              foreach($tab['intérieur'] as $produits){
+                                   $compte = $compte + 1;
+                                   if($compte < 5){
+                                        echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
+                                        echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
+                                        echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
+                                        echo "<div class='contentBx'>";
+                                        echo "<h2>".$produits['nom']."</h2>";
+                                        echo "<div class='color'> <h3>Couleur</h3>";
+                                        foreach($produits['couleur'] as $couleur){
+                                             foreach($couleur as $key => $images){
+                                                  foreach ($images as $image) {
+                                                       echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                                                  }
+                                             }
+                                        }
+                                        echo "</div>";
+                                        echo "<div class='commande'>";
+                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<div class='quantite'>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
+                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<div class='stock'>";
+                                        echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
+                                   }   
+                              }
+                         
+                              echo "</div>";
+                              echo "<div class='interieurBot'>";
+                              $compte = 0;
+
+                              foreach($tab['intérieur'] as $produits){
+                                   $compte = $compte + 1;
+                                   if($compte > 4){
+                                        echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
+                                        echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
+                                        echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
+                                        echo "<div class='contentBx'>";
+                                        echo "<h2>".$produits['nom']."</h2>";
+                                        echo "<div class='color'> <h3>Couleur</h3>";
+                                        foreach($produits['couleur'] as $couleur){
+                                             foreach($couleur as $key => $images){
+                                                  foreach ($images as $image) {
+                                                       echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                                                  }
+                                             }
+                                        }
+                                        echo "</div>";
+                                        echo "<div class='commande'>";
+                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<div class='quantite'>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
+                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<div class='stock'>";
+                                        echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
+                                   }   
+                              }
+                              echo "</div>";
+                              echo "</div>";
+                              echo "</div>";
+                              echo "<div class='bandeauP'>";
+                              echo "<hr id='exterieurP'>";
+                              echo "<div class='titre'>";
+                              echo "<h2>extérieur</h2>";
+                              echo "</div>";
+                              echo "<hr>";
+                              echo "</div>";
+                              echo "<div class='pageProduit'>";
+                              echo "<div class='corps'>";
+                              echo "<div class='exterieurTop'>";
+                              $compte = 0;
+
+                              foreach($tab['extérieur'] as $produits){
+                                   $compte = $compte + 1;
+                                   if($compte < 5){
+                                        echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
+                                        echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
+                                        echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
+                                        echo "<div class='contentBx'>";
+                                        echo "<h2>".$produits['nom']."</h2>";
+                                        echo "<div class='color'> <h3>Couleur</h3>";
+                                        foreach($produits['couleur'] as $couleur){
+                                             foreach($couleur as $key => $images){
+                                                  foreach ($images as $image) {
+                                                       echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                                                  }
+                                             }
+                                        }
+                                        echo "</div>";
+                                        echo "<div class='commande'>";
+                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<div class='quantite'>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
+                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<div class='stock'>";
+                                        echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
+                                   }   
+                              }
+                              echo "</div>";
+                              echo "<div class='exterieurBot'>";
+                              $compte = 0;
+
+                              foreach($tab['extérieur'] as $produits){
+                                   $compte = $compte + 1;
+                                   if($compte > 4){
+                                        echo '<div class="container"> <div class="card"> <p>' . $produits['nom'].'</p>';
+                                        echo "<div class='imgBx' onmousemove=\"zoomImg(event, '".$produits['idImg']."')\" style=\"background-image: url(".$produits['couleur'][0]['a'][0]['src']."); background-size: 0px;\" onmouseleave=\"disparition(event, '".$produits['idImg']."')\" onmouseenter=\"apparition(event, '".$produits['idImg']."')\" id=\"".$produits['idBckG']."\">";
+                                        echo "<img src='".$produits['couleur'][0]['a'][0]['src']."' id='".$produits['idImg']."' alt='".$produits['nom']."'> </div>";
+                                        echo "<div class='contentBx'>";
+                                        echo "<h2>".$produits['nom']."</h2>";
+                                        echo "<div class='color'> <h3>Couleur</h3>";
+                                        foreach($produits['couleur'] as $couleur){
+                                             foreach($couleur as $key => $images){
+                                                  foreach ($images as $image) {
+                                                       echo "<span id='".$image['idC']."' onclick=\"changeImage('".$produits['idImg']."', '".$image['src']."', '".$produits['idBckG']."')\"></span>";
+                                                  }
+                                             }
+                                        }
+                                        echo "</div>";
+                                        echo "<div class='commande'>";
+                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<div class='quantite'>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
+                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<div class='stock'>";
+                                        echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
+                                   }   
+                              }
+                              echo "</div>";
+                              echo "</div>";
+                              echo "</div>";
+                              break;
+                    }
+               }
+          ?>
           <div class="toggle">
                <ion-icon name="menu" class="open"></ion-icon>
                <ion-icon name="close" class="close"></ion-icon>
