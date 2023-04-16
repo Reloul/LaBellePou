@@ -9,7 +9,9 @@
                <h3>Voici votre Panier : </h3>
           </div>
           <form class="produitV" method="post" action="../php/info.php">
-               <input type="submit" value="Sauvegarder Panier" id="sauve">
+               <?php
+                    echo "<input type='submit' value='Sauvegarder Panier' id='sauve' onmouseenter='alerte(".$email.")'>";
+               ?>
                <hr>
                <?php
                     $tab = $_SESSION['panier'];
