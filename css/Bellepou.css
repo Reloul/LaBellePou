@@ -57,7 +57,6 @@ body{
     background: #A8DADC;
     transition : 0.5s;
     overflow-x: hidden;
-    box-shadow: 10px 0 0 #F1FAEE;
     box-shadow: 5px 0 0 #F1FAEE;
     z-index: 10;
 }

@@ -1,5 +1,6 @@
 <?php
      session_start();
+     include 'verifcontact.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,19 +17,19 @@
           <div class="form">
             <h2>Contactez-nous !</h2>
             <br>
-            <form>
-               <label for="dateContact">Date de contact</label>
-               <input type="date" name="dateContact" id="dateC">
-               <div class="verif" id="dateverif"></div>
+            <form method="post" action="">
                <label for="prenom">Prénom</label>
-               <input type="text" id="prenom" placeholder="Votre prénom...">
-               <div class="verif" id="prenomverif"></div>
+               <input type="text" id="prenom" placeholder="Votre prénom..." name="prenom" value="<?php echo $prenom; ?>" class="<?php echo $prenomclass; ?>">
+               <div class="verif" id="prenomverif"><?php echo $prenomverif; ?></div>
+               
                <label for="nom">Nom</label>
-               <input type="text" id="nom" placeholder="Votre nom...">
-               <div class="verif" id="nomverif"></div>
+               <input type="text" id="nom" placeholder="Votre nom..." name="nom" value="<?php echo $nom; ?>" class="<?php echo $nomclass; ?>">
+               <div class="verif" id="nomverif"><?php echo $nomverif; ?></div>
+               
                <label for="dateNaissance">Date de naissance</label>
-               <input type="date" name="dateNaissance" id="dateN">
-               <div class="verif" id="verifnaiss"></div>
+               <input type="date" name="dateN" id="dateN" value="<?php echo $dateN; ?>" class="<?php echo $dateNclass; ?>">
+               <div class="verif" id="verifnaiss"><?php echo $verifnaiss; ?></div>
+               
                <label for="genre">Genre</label>
                <ul class="genre">
                     <li>
@@ -44,26 +45,32 @@
                          <label for="nh90">Hélicoptère NH90 bi-turbine</label>
                     </li>
                </ul>
+               
                <label for="email">Email</label>
-               <input type="email" id="email" placeholder="Votre email...">
-               <div class="verif" id="emailexe"></div>
+               <input type="email" id="emailcontact" placeholder="Votre email..." name="emailcontact" value="<?php echo $emailcontact; ?>" class="<?php echo $emailclass; ?>">
+               <div class="verif" id="emailexe"><?php echo $emailexe; ?></div>
+               
                <label for="fonction">Fonction</label>
                <select name="fonction" id="fonction">
-                    <option value="enseignant">Enseignant</option>
-                    <option value="etudiant">Etudiant</option>
-                    <option value="empereur">Empereur de l'empire du Japon</option>
+                    <option value="enseignant" <?php if($fonction == "enseignant") echo "selected"; ?>>Enseignant</option>
+                    <option value="etudiant" <?php if($fonction == "etudiant") echo "selected"; ?>>Etudiant</option>
+                    <option value="empereur" <?php if($fonction == "empereur") echo "selected"; ?>>Empereur de l'empire du Japon</option>
                </select>
+               
                <label for="sujet">Sujet</label>
                <select name="sujet" id="sujet">
-                    <option value="site">Problème sur le site</option>
-                    <option value="livraison">Problème de livraison</option>
-                    <option value="achat">Soucis d'achat</option>
-                    <option value="autre">Autre</option>
+                    <option value="site" <?php if($sujet == "site") echo "selected"; ?>>Problème sur le site</option>
+                    <option value="livraison" <?php if($sujet == "livraison") echo "selected"; ?>>Problème de livraison</option>
+                    <option value="facturation" <?php if($sujet == "facturation") echo "selected"; ?>>Problème de facturation</option>
+                    <option value="autre" <?php if($sujet == "autre") echo "selected"; ?>>Autre</option>
                </select>
+               
                <label for="message">Message</label>
-               <textarea name="message" placeholder="Votre message..." id="mess"></textarea>
-               <div class="verif" id="messverif"></div>
-               <input type="submit" value="Envoyer" id="submit">
+               <textarea name="message" id="message" cols="30" rows="10" style="<?php echo $messstyle; ?>"><?php echo $message; ?></textarea>
+               <div class="verif" id="messageverif"><?php echo $messverif; ?></div>
+               
+               <input type="submit" value="Envoyer">
+               <span class="verif" id="envoi"><?php echo $envoi; ?></span>
             </form>
           </div>
           
