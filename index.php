@@ -1,6 +1,7 @@
 <?php
      session_start();
      include 'php/deconnexion.php';
+     include 'php/varSession.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +11,13 @@
         <meta name="author" lang="fr" content="Latry Ugo & Serres Valentin">
         <title> La Bellepou | Site Officiel de Poubelles </title>
         <link rel="stylesheet" type="text/css" href="css/Bellepou.css">
+       
+        <link rel="stylesheet" type="text/css" href="css/panier.css">
     </head>
     <body>
+        <?php
+            include 'php/panier.php';
+        ?>
     <header class="haut">
         <div class="name">
             <h1 id="titre">La Bellepou</h1>
@@ -76,7 +82,7 @@
                     <h2 id="catTitre">POUBELLES D'INTÉRIEUR ET D'EXTÉRIEUR</h2>
                </div>
                <div class="bouton">
-                    <a id="boutonA" href="html/produit.html">Découvrez Nos Produits</a>
+                    <a id="boutonA" href="php/produit.php">Découvrez Nos Produits</a>
                </div>
           </div>
           
