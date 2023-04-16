@@ -33,19 +33,20 @@
                <label for="genre">Genre</label>
                <ul class="genre">
                     <li>
-                         <input type="radio" id="homme" name="genre" value="Homme">
+                         <input type="radio" id="homme" name="genre" value="Homme" <?php echo $hommeChecked; ?>>
                          <label for="homme">Homme</label>
                     </li>
                     <li>
-                         <input type="radio" id="femme" name="genre" value="Femme">
+                         <input type="radio" id="femme" name="genre" value="Femme" <?php echo $femmeChecked; ?>>
                          <label for="femme">Femme</label>
                     </li>
                     <li>
-                         <input type="radio" id="nh90" name="genre" value="NH90">
+                         <input type="radio" id="nh90" name="genre" value="NH90" <?php echo $nh90Checked; ?>>
                          <label for="nh90">Hélicoptère NH90 bi-turbine</label>
                     </li>
                </ul>
-               
+               <div class="verif" id="genreverif"><?php echo $genreverif; ?></div>
+
                <label for="email">Email</label>
                <input type="email" id="emailcontact" placeholder="Votre email..." name="emailcontact" value="<?php echo $emailcontact; ?>" class="<?php echo $emailclass; ?>">
                <div class="verif" id="emailexe"><?php echo $emailexe; ?></div>

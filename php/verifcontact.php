@@ -5,6 +5,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $emailcontact = $_POST["emailcontact"];
     $message = $_POST["message"];
     $dateN = $_POST["dateN"];
+    $genre = $_POST["genre"];
+    $hommeChecked = '';
+    $femmeChecked = '';
+    $nh90Checked = '';
 
     $error = false;
     
@@ -32,30 +36,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $messstyle = "background-color: #ff6e6b;";
     }
 
-    if (!isset($_POST['genre'])) {
+    if (!isset($genre)) {
         $error = true;
         $genreverif = "⚠️ Veuillez sélectionner votre genre ⚠️";
     }
 
-    if (preg_match('/^(\d{2})\/(\d{2})\/(\d{4})$/', $dateN, $matches)) {
-        $day = $matches[1];
-        $month = $matches[2];
-        $year = $matches[3];
-        
-        if (strtotime("$year-$month-$day") > time()) {
-            $error = true;
-            $verifnaiss = "⚠️ Veuillez entrer une date de naissance antérieure ou égale à la date du jour ⚠️";
-            $dateNclass = "error";
-        }
-    } else {
+    switch ($genre) {
+        case 'Homme':
+          $hommeChecked = 'checked';
+          break;
+        case 'Femme':
+          $femmeChecked = 'checked';
+          break;
+        case 'NH90':
+          $nh90Checked = 'checked';
+          break;
+        default:
+          break;
+      }
+
+    $dateObj = DateTime::createFromFormat('Y-m-d', $dateN);
+    if (!($dateObj && $dateObj->format('Y-m-d') === $dateN && $dateObj < new DateTime())) {
         $error = true;
         $verifnaiss = "⚠️ Veuillez entrer une date de naissance valide ⚠️";
         $dateNclass = "error";
     }
     
-    
-
-
     if (!$error) {
         $envoi = "Le formulaire a été soumis avec succès.";
     }
