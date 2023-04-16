@@ -9,12 +9,14 @@
         <title> La Bellepou | Produits </title>
         <link rel="stylesheet" type="text/css" href="../css/produit.css">
         <link rel="stylesheet" type="text/css" href="../css/Bellepou.css">
-        <link rel="stylesheet" type="text/css" href="/css/panier.css">
+        <link rel="stylesheet" type="text/css" href="../css/panier.css">
     </head>
     <body>
           <?php include 'header.php'; ?>
           <?php include 'menu.php'; ?>
-          <?php include 'panier.php'; ?>
+          <?php include 'panier.php'; 
+               include 'varSession.inc.php';
+          ?>
           <div class="bandeauPres">
                <h2 id="catTitre">CATÉGORIES</h2>
                <p id="catPhrase">Besoin d'une poubelle? Choisissez la catégorie qui vous intéresse :</p>
@@ -62,8 +64,7 @@
                <div class="corps"> 
                     <div class="corbeilleTop">
                     <?php
-                         $json = file_get_contents('../json/produit.json');
-                         $tab = json_decode($json, true);
+                         $tab = $_SESSION['produit'];
                          $compte = 0;
 
                          foreach($tab['corbeille'] as $produits){
