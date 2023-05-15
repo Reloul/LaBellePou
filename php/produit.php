@@ -16,6 +16,7 @@
           <?php include 'menu.php'; ?>
           <?php include 'panier.php'; 
                include 'varSession.inc.php';
+               include '../bdd/laBellepouData.php';
           ?>
           
           <div class="bandeauPres">
