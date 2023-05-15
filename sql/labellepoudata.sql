@@ -11,6 +11,7 @@ CREATE TABLE Poubelle(
     nom VARCHAR(20),
     prix FLOAT,
     quantite INT,
+    idCat INT,
     FOREIGN KEY fk_Categorie(idCat) REFERENCES Categorie(idCategorie)
 );
 
@@ -20,11 +21,9 @@ CREATE TABLE Couleur(
     source VARCHAR(200)
 );
 CREATE TABLE Posseder(
-    CONSTRAINT pk_Posseder(idPoub,idCoul),
+    idPoub INT,
+    idCoul INT,
+    CONSTRAINT pk_Posseder PRIMARY KEY (idPoub,idCoul),
     FOREIGN KEY fk_Poubelle(idPoub) REFERENCES Poubelle(idPoubelle),
-    FOREIGN KEY fk_Couleur(idCoul) REFERENCES Couleur(idCoul)
+    FOREIGN KEY fk_Couleur(idCoul) REFERENCES Couleur(idCouleur)
 );
-
-INSERT INTO Categorie(1,'Corbeilles');
-INSERT INTO Categorie(2,'Interieures');
-INSERT INTO Categorie(3,'Exterieurs');
