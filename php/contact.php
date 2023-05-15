@@ -20,6 +20,7 @@
             <h2>Contactez-nous !</h2>
             <br>
             <form method="post" action="">
+               <label for="prenom">Prénom</label>
                <input type="text" id="prenom" placeholder="Votre prénom..." name="prenom" value="<?php echo $prenom; ?>" class="<?php echo $prenomclass; ?>">
                <div class="verif" id="prenomverif"><?php echo $prenomverif; ?></div>
                <label for="nom">Nom</label>
