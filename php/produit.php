@@ -93,7 +93,7 @@
                                    echo "<div class='commande'>";
                                    echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                    echo "<div class='quantite'>";
-                                   echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                   echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                    echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                    echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                    echo "<div class='stock'>";
@@ -124,7 +124,7 @@
                                    echo "<div class='commande'>";
                                    echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                    echo "<div class='quantite'>";
-                                   echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                   echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                    echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                    echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                    echo "<div class='stock'>";
@@ -168,7 +168,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
@@ -200,7 +200,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
@@ -244,7 +244,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
@@ -275,7 +275,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
@@ -319,7 +319,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
@@ -350,7 +350,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
@@ -392,7 +392,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
@@ -424,7 +424,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
@@ -466,7 +466,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
@@ -497,7 +497,7 @@
                                         echo "<div class='commande'>";
                                         echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant.']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
                                         echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
