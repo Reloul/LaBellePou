@@ -27,3 +27,17 @@ CREATE TABLE Posseder(
     FOREIGN KEY fk_Poubelle(idPoub) REFERENCES Poubelle(idPoubelle),
     FOREIGN KEY fk_Couleur(idCoul) REFERENCES Couleur(idCouleur)
 );
+CREATE TABLE Utilisateur(
+    idUser INT PRIMARY KEY AUTO_INCREMENT,
+    mail VARCHAR(200) NOT NULL,
+    mdp VARCHAR(200) NOT NULL
+);
+CREATE TABLE Acheter(
+    idPou INT,
+    idUser INT,
+    idQuantite INT,
+    idPrix FLOAT,
+    CONSTRAINT pk_Acheter PRIMARY KEY (idPou, idUser),
+    FOREIGN KEY fk_Poubelle(idPou) REFERENCES Poubelle(idPoubelle),
+    FOREIGN KEY fk_Utilisateur(idUser) REFERENCES Utilisateur(idUser)
+);
