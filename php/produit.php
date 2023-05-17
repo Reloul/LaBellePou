@@ -492,10 +492,12 @@
                          var stock = this.parentNode.parentNode.parentNode.parentNode.querySelector('.stock .allStock');
                          var quantite = parseInt(input.value);
                          var stockValue = parseInt(stock.innerHTML);
+                         var id = stock.dataset.id;
 
                          if (quantite < stockValue) {
                               stockValue = stockValue - 1;
                               stock.innerHTML = stockValue;
+                              updateStock(id, stockValue);
                          } else {
                               alert("La quantité dépasse le stock disponible.");
                          }
@@ -506,10 +508,12 @@
                          var stock = this.parentNode.parentNode.parentNode.parentNode.querySelector('.stock .allStock');
                          var quantite = parseInt(input.value);
                          var stockValue = parseInt(stock.innerHTML);
+                         var id = stock.dataset.id;
 
                          if (quantite > 0) {
                               stockValue = stockValue + 1;
                               stock.innerHTML = stockValue;
+                              updateStock(id, stockValue);
                          }
                     });
 
@@ -518,19 +522,30 @@
                          var stock = this.parentNode.parentNode.parentNode.parentNode.querySelector('.stock .allStock');
                          var quantite = parseInt(input.value);
                          var stockValue = parseInt(stock.innerHTML);
+                         var id = stock.dataset.id;
 
                          if (stockValue > quantite) {
-                         stockValue = stockValue - quantite;
-                         stock.innerHTML = stockValue;
+                              stockValue = stockValue - quantite;
+                              stock.innerHTML = stockValue;
+                              updateStock(id, stockValue);
 
-                         var idImg = this.getAttribute('data-idImg');
-                         var idQuant = this.getAttribute('data-idQuant');
-                         ajouterPanier(idImg, idQuant, this, quantite);
+                              var idImg = this.getAttribute('data-idImg');
+                              var idQuant = this.getAttribute('data-idQuant');
+                              ajouterPanier(idImg, idQuant, this);
                          }
                     });
                }
+               function updateStock(id, quantite) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', '../php/majStock.php?id=' + id + '&quantite=' + quantite);
+                    xhr.onreadystatechange = function() {
+                         if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+                              console.log(xhr.responseText);
+                         }
+                    };
+                    xhr.send(null);
+               }
                });
-
           </script>
      </body>
 </htlm>
