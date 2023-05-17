@@ -18,7 +18,7 @@
           <div class="seconnecter">
             <h2>Connexion</h2>
             <br>
-            <form method="post" action="">
+            <form method="post" action="verif.php">
                <label for="email">Email</label>
                <input type="email" id="email" placeholder="Votre email..." name="email" value="<?php echo $email; ?>">
                <label for="mdp">Mot de passe</label>

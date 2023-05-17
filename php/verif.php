@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+require_once 'bdd.php';
+Connexion();
 $error = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -11,14 +13,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($email) || empty($password)) {
         $error = "Veuillez remplir tous les champs.";
     } else {
-         $json = file_get_contents('../json/users.json');
-         $users = json_decode($json, true)['users'];
+        try{
+            $users = recUtilisateur(null,null);
+        }catch  (Exception $e){
+            echo $e->getMessage();
+        }
  
          $userFound = false;
          foreach ($users as $user) {
-             if ($user['email'] == $email && $user['password'] == $password) {
-                 $userFound = true;
-                 break;
+             if ($user['mail'] == $email && $user['mdp'] == $password) {
+                $userFound = true;
              }
          }
  

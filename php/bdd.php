@@ -17,6 +17,7 @@ function Connexion(){
 }
 
 
+
 function Deconnexion(){
     global $basedd;
     if ($basedd == NULL){
@@ -111,17 +112,18 @@ function recUtilisateur($idUser, $login){
     if($basedd == NULL){
         throw new Exception("La BDD n'est pas connectée");
     }
-    switch ($idUser){
-        case NULL:
-            $req = "SELECT * FROM Utilisateur WHERE mail =".$login;
-            break;
-        default:
-            $req = "SELECT * FROM Utilisateur WHERE idUser=".$idUser;
+    if($login != '' && $login != NULL){
+        $req = "SELECT * FROM Utilisateur WHERE mail ='".$login."'";
+    }
+    else if ($idUser!= NULL){
+        $req = "SELECT * FROM Utilisateur WHERE idUser=".$idUser;
+    }else{
+        $req ="SELECT * FROM Utilisateur";
     }
     
     $result = mysqli_query($basedd, $req);
     if(!$result){
-        throw new Exception("La requête a échoué");
+        throw new Exception("La requête a échoué rec User");
     }
     $produit = array();
     while($row = mysqli_fetch_array($result)){
@@ -134,13 +136,20 @@ function addUser($mail, $mdp){
     global $basedd;
 
     if($basedd == NULL){
-        throw new Exception("La BDD n'es pas connectée");
+        throw new Exception("La BDD n'est pas connectée");
     }
-    $req = 'INSERT INTO Utilisateur VALUES(null,"'.$mail.'",'.$mdp.')';
+    $fichier = fopen('../sql/labellepoudata.sql', 'a+');
+    $req = 'INSERT INTO Utilisateur (mail,mdp) VALUES("'.$mail.'","'.$mdp.'")';
     $result = mysqli_query($basedd, $req);
     if(!$result){
-        throw new Exception("La requête a échouée");
+        throw new Exception("La requête a échouée addUser");
     }
+    $ecrire = $req.";"."\n";
+    fwrite($fichier, $ecrire);
+    $idUser = mysqli_insert_id($basedd);
+    $reqWithId = 'UPDATE Utilisateur SET idUser = '.$idUser.' WHERE idUser = LAST_INSERT_ID();'."\n";
+    fwrite($fichier, $reqWithId);
+    fclose($fichier);
     return(recUtilisateur(null, $mail));
 }
 

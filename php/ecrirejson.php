@@ -1,6 +1,15 @@
 <?php
 
 session_start();
+require_once('bdd.php');
+
+if(!bddConnecter()){
+    try{
+        Connexion();
+    }catch(Exception $e){
+        echo $e->getMessage();
+    }
+}
 
 $email = "";
 $password = "";
@@ -15,12 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = "Veuillez entrer une adresse email valide.";
     } else {
-        $json = file_get_contents('../json/users.json');
-        $users = json_decode($json, true)['users'];
 
         $userExists = false;
         foreach ($users as $user) {
-            if ($user['email'] == $email) {
+            if ($user['mail'] == $email) {
                 $userExists = true;
                 break;
             }
@@ -29,13 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($userExists) {
             $error = "Cet email est déjà utilisé.";
         } else {
-            $newUser = array('email' => $email, 'password' => $password);
-            $users[] = $newUser;
-            $json = json_encode(array('users' => $users), JSON_PRETTY_PRINT);
-            file_put_contents('../json/users.json', $json);
-
-            $_SESSION['email'] = $email;
-            $_SESSION['password'] = $password;
+            try{
+                $_SESSION['user'] = addUser($email, $password);
+                $user = $_SESSION['user'];
+                $_SESSION['email'] = $user[0]['mail'];
+                $_SESSION['password'] = $user[0]['mdp'];
+            }catch(Exception $e){
+                $e->getMessage();
+            }
             header('Location: ../index.php');
             exit;
         }

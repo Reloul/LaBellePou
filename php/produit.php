@@ -525,7 +525,7 @@
 
                          var idImg = this.getAttribute('data-idImg');
                          var idQuant = this.getAttribute('data-idQuant');
-                         ajouterPanier(idImg, idQuant, this);
+                         ajouterPanier(idImg, idQuant, this, quantite);
                          }
                     });
                }
