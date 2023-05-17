@@ -1,7 +1,7 @@
 <?php
     $produit = $_SESSION['produit'];
     $base = 'Produits';
-    $connect = mysqli_connect('localhost','valentin','testmoi123',$base);
+    $connect = mysqli_connect('localhost','latryugo','guillaumelepd',$base);
     if(mysqli_connect_errno()){
         echo mysqli_connect_error();
     }

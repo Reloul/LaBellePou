@@ -91,11 +91,11 @@
                                    }
                                    echo "</div>";
                                    echo "<div class='commande'>";
-                                   echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                   echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                    echo "<div class='quantite'>";
-                                   echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                   echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                    echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                   echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                   echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                    echo "<div class='stock'>";
                                    echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                               }   
@@ -122,11 +122,11 @@
                                    }
                                    echo "</div>";
                                    echo "<div class='commande'>";
-                                   echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                   echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                    echo "<div class='quantite'>";
-                                   echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                   echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                    echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                   echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                   echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                    echo "<div class='stock'>";
                                    echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                               }   
@@ -166,11 +166,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -198,11 +198,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -242,11 +242,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -273,11 +273,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -317,11 +317,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -348,11 +348,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -390,11 +390,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -422,11 +422,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -464,11 +464,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -495,11 +495,11 @@
                                         }
                                         echo "</div>";
                                         echo "<div class='commande'>";
-                                        echo "<button onclick=\"ajouterPanier('".$produits['idImg']."','".$produits['idQuant']."',this)\" id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
+                                        echo "<button class=\"achat\" data-idImg='".$produits['idImg']."' data-idQuant='".$produits['idQuant']."' id='achat' value='".$produits['prix']."'>Acheter ".$produits['prix']."€</button>";
                                         echo "<div class='quantite'>";
-                                        echo "<button id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
+                                        echo "<button class=\"moins\" id='".$produits['idMoins']."' onclick=\"moins('".$produits['idQuant']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">-</button>";
                                         echo "<input type='text' value='0' readonly id='".$produits["idQuant"]."'>";
-                                        echo "<button id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
+                                        echo "<button class=\"plus\" id='".$produits['idPlus']."' onclick=\"plus('".$produits['idQuant']."', '".$produits['idStock']."', '".$produits['idMoins']."', '".$produits['idPlus']."')\">+</button></div></div>";
                                         echo "<div class='stock'>";
                                         echo "<button type='button' id='".$produits['idBStock']."' onclick=\"affStock('".$produits['idStock']."')\">Stock<div class='allStock' id='".$produits['idStock']."'>".$produits['quantite']."</div></button></div></div></div></div>";
                                    }   
@@ -528,5 +528,57 @@
           <script type="text/javascript" src="../js/index.js"></script>
           <script type="text/javascript" src="../js/produit.js"></script>
           <script type="text/javascript" src="../js/panier.js"></script>
+          <script>
+               document.addEventListener('DOMContentLoaded', function() {
+               var plus = document.getElementsByClassName('plus');
+               var moins = document.getElementsByClassName('moins');
+               var achat = document.getElementsByClassName('achat');
+
+               for (var i = 0; i < plus.length; i++) {
+                    plus[i].addEventListener('click', function() {
+                         var input = this.parentNode.querySelector('input[type=text]');
+                         var stock = this.parentNode.parentNode.parentNode.parentNode.querySelector('.stock .allStock');
+                         var quantite = parseInt(input.value);
+                         var stockValue = parseInt(stock.innerHTML);
+
+                         if (quantite < stockValue) {
+                              stockValue = stockValue - 1;
+                              stock.innerHTML = stockValue;
+                         } else {
+                              alert("La quantité dépasse le stock disponible.");
+                         }
+                    });
+
+                    moins[i].addEventListener('click', function() {
+                         var input = this.parentNode.querySelector('input[type=text]');
+                         var stock = this.parentNode.parentNode.parentNode.parentNode.querySelector('.stock .allStock');
+                         var quantite = parseInt(input.value);
+                         var stockValue = parseInt(stock.innerHTML);
+
+                         if (quantite > 0) {
+                              stockValue = stockValue + 1;
+                              stock.innerHTML = stockValue;
+                         }
+                    });
+
+                    achat[i].addEventListener('click', function() {
+                         var input = this.parentNode.querySelector('input[type=text]');
+                         var stock = this.parentNode.parentNode.parentNode.parentNode.querySelector('.stock .allStock');
+                         var quantite = parseInt(input.value);
+                         var stockValue = parseInt(stock.innerHTML);
+
+                         if (stockValue > quantite) {
+                         stockValue = stockValue - quantite;
+                         stock.innerHTML = stockValue;
+
+                         var idImg = this.getAttribute('data-idImg');
+                         var idQuant = this.getAttribute('data-idQuant');
+                         ajouterPanier(idImg, idQuant, this, quantite);
+                         }
+                    });
+               }
+               });
+
+          </script>
      </body>
 </htlm>

@@ -13,9 +13,10 @@ function alerte(e){
         bouton.style.display = "block";
     }
 }
-function ajouterPanier(idImg, quant, e) {
+function ajouterPanier(idImg, quant, e, stock) {
     var quantite = document.getElementById(quant).value;
-    if (quantite >0){
+    console.log(stock);
+    if (quantite > 0 && quantite <= stock){
         var prix = e.value;
         var nom = document.getElementById(idImg).alt;
 
