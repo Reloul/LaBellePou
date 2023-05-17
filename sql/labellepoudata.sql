@@ -128,3 +128,6 @@ INSERT INTO Posseder VALUES (17,48);
 INSERT INTO Posseder VALUES (17,49);
 INSERT INTO Posseder VALUES (17,50);
 INSERT INTO Posseder VALUES (18,51);
+
+INSERT INTO Utilisateur VALUES(1,"valentin@serres.fr","gaming");
+INSERT INTO Utilisateur VALUES(2,"ugo@latry.fr","paularis");
