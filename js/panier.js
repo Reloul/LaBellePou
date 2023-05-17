@@ -15,7 +15,8 @@ function alerte(e){
 }
 function ajouterPanier(idImg, quant, e, stock) {
     var quantite = document.getElementById(quant).value;
-    console.log(stock);
+    console.log("stock :"+stock);
+    console.log("quant :"+quant);
     if (quantite > 0 && quantite <= stock){
         var prix = e.value;
         var nom = document.getElementById(idImg).alt;
