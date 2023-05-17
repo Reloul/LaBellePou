@@ -13,11 +13,9 @@ function alerte(e){
         bouton.style.display = "block";
     }
 }
-function ajouterPanier(idImg, quant, e, stock) {
+function ajouterPanier(idImg, quant, e) {
     var quantite = document.getElementById(quant).value;
-    console.log("stock :"+stock);
-    console.log("quant :"+quant);
-    if (quantite > 0 && quantite <= stock){
+    if (quantite > 0){
         var prix = e.value;
         var nom = document.getElementById(idImg).alt;
 
